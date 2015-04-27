@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+<field
+	default=""
+	name="id"
+	label="Id"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field
+	required="true"
+	default=""
+	name="name"
+	label="FI_NAME"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="country_id"
+	label="FI_COUNTRY"
+	type="countrylist"
+	class="inputbox"
+/>
+<field
+	required="true"
+	default=""
+	name="code1"
+	label="FI_CODE1"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="code2"
+	label="FI_CODE2"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field name="published" type="list" label="FI_STATUS"
+	class="inputbox"
+	filter="intval" size="1" default="1"
+>
+	<option value="1">FI_NOTBLOCK</option>
+	<option value="0">FI_BLOCK</option>
+</field>
+	</fieldset>
+</form>

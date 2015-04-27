@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="content" method="upgrade">
+	<name>Content - IProperty DPE Graphs</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Show Diagnostic de Performance Energetique chart in description area.<br />To use, input your energy and emission values (in that order, separated by a comma!) in the following format within your description text: {dpe_energie 250, 15.6}. Enter 'null' if you don't want to display a value {dpe_energie null, 15.6}.</description>
+	<files>
+		<filename plugin="dpe">dpe.php</filename>
+        <filename>index.html</filename>
+	</files>
+    <languages>
+	   <language tag="en-GB">en-GB.plg_content_dpe.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+               <field name="header_energy" type="text" default="Logement économe" label="PLG_IP_DPE_ENERGY_HEADER_LABEL" description="PLG_IP_DPE_ENERGY_HEADER_DESC" />
+               <field name="footer_energy" type="text" default="Logement énergivore" label="PLG_IP_DPE_ENERGY_FOOTER_LABEL" description="PLG_IP_DPE_ENERGY_FOOTER_DESC" />
+               <field name="energy_measurement" type="text" default="kWH/m" label="PLG_IP_DPE_ENERGY_MEASURE_LABEL" description="PLG_IP_DPE_ENERGY_MEASURE_DESC" />
+               <field type="spacer" />
+               <field name="header_climate" type="text" default="Faible émission de GES" label="PLG_IP_DPE_CLIMATE_HEADER_LABEL" description="PLG_IP_DPE_CLIMATE_HEADER_DESC" />
+               <field name="footer_climate" type="text" default="Forte émission de GES" label="PLG_IP_DPE_CLIMATE_FOOTER_LABEL" description="PLG_IP_DPE_CLIMATE_FOOTER_DESC" />
+               <field name="climate_measurement" type="text" default="kg/m" label="PLG_IP_DPE_CLIMATE_MEASURE_LABEL" description="PLG_IP_DPE_CLIMATE_MEASURE_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

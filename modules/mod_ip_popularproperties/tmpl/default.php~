@@ -1,0 +1,100 @@
+<?php
+/**
+ * @version 1.5.1 2009-09-28
+ * @package Joomla
+ * @subpackage Iproperty
+ * @copyright (C)  2009 the Thinkery
+ * @license see LICENSE.php
+ */
+
+// Check to ensure this file is included in Joomla!
+defined('_JEXEC') or die('Restricted access');
+$ipfeaturedstyle = '
+<style type="text/css">
+div.ip_featured_thumb{ width: '. $this->thumb_width .' !important; height: '. $this->thumb_height .' !important; border: solid 1px '.$params->get( 'border_color', '#fff' ).'; overflow:hidden !important;}
+div.ip_featured_overview{margin-top: 5px;}
+</style>';
+
+$mainframe->addCustomHeadTag($ipfeaturedstyle);
+?>
+<div style="position: relative;">
+<table width="100%" cellpadding="5" cellspacing="1">
+    <?php
+       if( $params->get('layout') == 1 ): //horizontal layout
+            for($i=0; $i < sizeof($list); $i++):
+
+                echo '<tr>
+                         <td width="10%" valign="top">
+                           <div class="ip_featured_thumb">
+                           <a href="' . $list[$i]->link . '">
+                                <img src="' . $list[$i]->folder.$list[$i]->mainimage . '" class="ip_featured_img" alt="' . $list[$i]->street_address . '" width="'.$params->get( 'thumb_width', '200' ).'" />
+                           </a>
+                           </div>
+                         </td>
+                         <td width="90%" valign="top">
+                           <div class="ip_featured_overview">
+                                <a href="' . $list[$i]->link . '"><strong>' . strtoupper($list[$i]->street_address) . '</strong></a> - ';
+                                echo '<div class="ip_featured_overview2">';
+                                echo '<em>';
+                                if($list[$i]->city) echo $list[$i]->city . ', ';
+                                if($list[$i]->state) echo $list[$i]->state;
+                                if($list[$i]->province) echo $list[$i]->province;
+                                echo '</em>';
+                                echo '</div>';
+                echo '
+                                <p>' . $list[$i]->introtext . '</p>
+                                <b>' . $list[$i]->formattedprice . '</b>
+                           </div>
+                        </td>
+                      </tr>';
+            endfor;
+     else: //vertical layout
+     ?>
+        <tr>
+            <?php
+            if($params->get( 'columns' ) == 2) $percentage = ' width="50%"';
+            if($params->get( 'columns' ) == 3) $percentage = ' width="33%"';
+
+            $x = 0;
+            $br = 0;
+            for( $i = 0; $i < count($list); $i++):
+
+                echo '<td'.$percentage.' valign="top">
+                           <div class="ip_featured_thumb">
+                           <a href="' . $list[$i]->link . '">
+                                <img src="' . $list[$i]->folder.$list[$i]->mainimage . '" class="ip_featured_img" alt="' . $list[$i]->street_address . '" width="'.$params->get( 'thumb_width', '200' ).'" />
+                           </a>
+                           </div>
+                           <div class="ip_featured_overview">
+                                <p><a href="' . $list[$i]->link . '"><strong>' . strtoupper($list[$i]->street_address) . '</strong></a><br />';
+                                echo '<em>';
+                                if($list[$i]->city) echo $list[$i]->city . ', ';
+                                if($list[$i]->state){
+                                    echo $list[$i]->state . '</em></p>';
+                                }else if($list[$i]->province){
+                                    echo $list[$i]->province . '</em></p>';
+                                }
+                echo '
+                                <p>' . $list[$i]->introtext . '</p>
+                                <b>' . $list[$i]->formattedprice . '</b>
+                           </div>
+                      </td>';
+                $x++;
+
+                if( $x == $params->get('columns') && ($i != sizeof($list) - 1)){
+                    echo '</tr><tr>';
+                    $x = 0;
+                }
+
+                if( $x < $params->get('columns') && $i == sizeof($list)){
+                    if( $x < $params->get('columns')){
+                        echo '<td'.$percentage.' valign="top">&nbsp;</td>';
+                        $x++;
+                    }
+                }
+            endfor;
+            ?>
+        </tr>
+    <?php endif; ?>
+</table>
+</div>

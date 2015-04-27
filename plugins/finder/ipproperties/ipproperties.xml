@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+    <name>PLG_FINDER_IPPROPERTIES</name>
+    <creationDate>June 2014</creationDate>
+    <copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>The Thinkery</author>
+    <authorEmail>info@thethinkery.net</authorEmail>
+    <authorUrl>www.thethinkery.net</authorUrl>
+    <version>3.3beta</version>
+	<description>PLG_FINDER_IPPROPERTIES_XML_DESCRIPTION</description>
+	<files>
+		<file plugin="ipproperties">ipproperties.php</file>
+    	<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.plg_finder_ipproperties.ini</language>
+		<language tag="en-GB">language/en-GB.plg_finder_ipproperties.sys.ini</language>
+	</languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="title_field" type="list" default="a.title" label="PLG_FINDER_IPPROPERTIES_TITLE_FIELD" description="PLG_FINDER_IPPROPERTIES_TITLE_FIELD_DESC">
+                    <option value="a.title">PLG_FINDER_IPPROPERTIES_TITLE</option>
+                    <option value="a.street">PLG_FINDER_IPPROPERTIES_STREET</option>
+                </field>
+                <field name="tax_add_stype" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_STYPE" description="PLG_FINDER_IPPROPERTIES_TAX_STYPE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_city" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_CITY" description="PLG_FINDER_IPPROPERTIES_TAX_CITY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_county" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_COUNTY" description="PLG_FINDER_IPPROPERTIES_TAX_COUNTY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_region" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_REGION" description="PLG_FINDER_IPPROPERTIES_TAX_REGION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_province" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_PROVINCE" description="PLG_FINDER_IPPROPERTIES_TAX_PROVINCE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_locstate" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_LOCSTATE" description="PLG_FINDER_IPPROPERTIES_TAX_LOCSTATE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tax_add_country" type="radio" class="btn-group" default="1" label="PLG_FINDER_IPPROPERTIES_TAX_COUNTRY" description="PLG_FINDER_IPPROPERTIES_TAX_COUNTRY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+	</config>
+</extension>

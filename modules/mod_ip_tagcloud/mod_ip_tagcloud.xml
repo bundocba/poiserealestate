@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>IP Tag Cloud</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+    <description>This module displays an automatically generated tag cloud from the content on your Intellectual Property data.</description>
+    <files>
+        <filename module="mod_ip_tagcloud">mod_ip_tagcloud.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_tagcloud.ini</language>
+    </languages> 
+    <config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="cat_id" type="ipcategory" default="" label="MOD_IP_TAGCLOUD_CATID" description="MOD_IP_TAGCLOUD_CATID_DESC" />
+                <field name="" type="header" default="MOD_IP_TAGCLOUD_DISPLAY" label="" description="" />
+                <field name="minsize" type="text" size="25" default="10" label="MOD_IP_TAGCLOUD_IPMINFONT" description="MOD_IP_TAGCLOUD_IPMINFONT_DESC" />
+                <field name="maxsize" type="text" size="25" default="25" label="MOD_IP_TAGCLOUD_IPMAXFONT" description="MOD_IP_TAGCLOUD_IPMAXFONT_DESC" />
+                <field name="fontcolor" type="text" size="25" default="#135cae" label="MOD_IP_TAGCLOUD_IPFONTCOLOR" description="MOD_IP_TAGCLOUD_IPFONTCOLOR_DESC" />
+                <field name="tagcount" type="text" size="25" default="25" label="MOD_IP_TAGCLOUD_IPWORDCNT" description="MOD_IP_TAGCLOUD_IPWORDCNT_DESC" />
+                <field name="limit" type="text" size="25" default="10" label="MOD_IP_TAGCLOUD_IPSEARCHLIMIT" description="MOD_IP_TAGCLOUD_IPSEARCHLIMIT_DESC" />
+                <field name="" type="header" default="MOD_IP_TAGCLOUD_IPEXCLUDE" label="" description="" />
+                <field name="excludelist" type="textarea" cols="25" label="MOD_IP_TAGCLOUD_IPEXCLUDE" description="MOD_IP_TAGCLOUD_IPEXCLUDE_DESC" rows="3" />
+                <field name="exclude_nonalph" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPEXCLUDE_NONALPH" description="MOD_IP_TAGCLOUD_IPEXCLUDE_NONALPH_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="" type="header" default="MOD_IP_TAGCLOUD_SHOW_FIELDS" label="" description="" />
+                <field name="colpstreet" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPSTREET" description="MOD_IP_TAGCLOUD_IPSTREET_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colptitle" type="radio" class="btn-group" default="0" label="MOD_IP_TAGCLOUD_IPTITLE" description="MOD_IP_TAGCLOUD_IPTITLE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpshort" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPSHORT" description="MOD_IP_TAGCLOUD_IPSHORT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpdesc" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPDESC" description="MOD_IP_TAGCLOUD_IPDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpcity" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPCITY" description="MOD_IP_TAGCLOUD_IPCITY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpprovince" type="radio" class="btn-group" default="0" label="MOD_IP_TAGCLOUD_IPPROVINCE" description="MOD_IP_TAGCLOUD_IPPROVINCE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpcounty" type="radio" class="btn-group" default="0" label="MOD_IP_TAGCLOUD_IPCOUNTY" description="MOD_IP_TAGCLOUD_IPCOUNTY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colpregion" type="radio" class="btn-group" default="0" label="MOD_IP_TAGCLOUD_IPREGION" description="MOD_IP_TAGCLOUD_IPREGION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colctitle" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPCATTITLE" description="MOD_IP_TAGCLOUD_IPCATTITLE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="colcdesc" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_IPCATDESC" description="MOD_IP_TAGCLOUD_IPCATDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_TAGCLOUD_HIDEMOD" description="MOD_IP_TAGCLOUD_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+                    default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

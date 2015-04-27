@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+    <name>IProperty - Google Places Plugin (Form Position)</name>
+    <author>The Thinkery</author>
+    <creationDate>June 2014</creationDate>
+    <copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>info@thethinkery.net</authorEmail>
+    <authorUrl>www.thethinkery.net</authorUrl>
+    <version>3.3.1</version>
+    <description>IProperty Plugin for Google Places</description>
+    <files>
+        <filename plugin="googleplaces">googleplaces.php</filename>
+        <filename>googleplaces.js</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+       <language tag="en-GB">en-GB.plg_iproperty_googleplaces.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tabtitle" type="text" default="Google Places" label="PLG_IP_GP_TABTITLE_LABEL" description="PLG_IP_GP_TABTITLE_DESC" />
+                <field name="position" type="radio" class="btn-group" default="0" label="PLG_IP_GP_POSITION_LABEL" description="PLG_IP_GP_POSITION_DESC">
+				  <option value="0">PLG_IP_GP_BEFORE</option>
+				  <option value="1">PLG_IP_GP_AFTER</option>
+				</field>
+                <field name="unit" type="list" default="mi" label="PLG_IP_GP_UNIT_LABEL" description="PLG_IP_GP_UNIT_DESC" >
+                    <option value="mi">PLG_IP_GP_MILE</option>
+                    <option value="km">PLG_IP_GP_KM</option>
+                </field>
+                <field name="radius" type="list" default="1" label="PLG_IP_GP_RADIUS" description="PLG_IP_GP_RADIUS_DESC" >
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                </field>
+                <field name="types" type="list" default="school" label="PLG_IP_GP_TYPE_LABEL" description="PLG_IP_GP_TYPE_DESC" multiple="multiple">
+                    <option value="accounting">PLG_IP_GP_ACCOUNTING</option>
+                    <option value="airport">PLG_IP_GP_AIRPORT</option>
+                    <option value="amusement_park">PLG_IP_GP_AMUSEMENT_PARK</option>
+                    <option value="aquarium">PLG_IP_GP_AQUARIUM</option>
+                    <option value="art_gallery">PLG_IP_GP_ART_GALLERY</option>
+                    <option value="atm">PLG_IP_GP_ATM</option>
+                    <option value="bakery">PLG_IP_GP_BAKERY</option>
+                    <option value="bank">PLG_IP_GP_BANK</option>
+                    <option value="bar">PLG_IP_GP_BAR</option>
+                    <option value="beauty_salon">PLG_IP_GP_BEAUTY_SALON</option>
+                    <option value="bicycle_store">PLG_IP_GP_BICYCLE_STORE</option>
+                    <option value="book_store">PLG_IP_GP_BOOK_STORE</option>
+                    <option value="bowling_alley">PLG_IP_GP_BOWLING_ALLEY</option>
+                    <option value="bus_station">PLG_IP_GP_BUS_STATION</option>
+                    <option value="cafe">PLG_IP_GP_CAFE</option>
+                    <option value="campground">PLG_IP_GP_CAMPGROUND</option>
+                    <option value="car_dealer">PLG_IP_GP_CAR_DEALER</option>
+                    <option value="car_rental">PLG_IP_GP_CAR_RENTAL</option>
+                    <option value="car_repair">PLG_IP_GP_CAR_REPAIR</option>
+                    <option value="car_wash">PLG_IP_GP_CAR_WASH</option>
+                    <option value="casino">PLG_IP_GP_CASINO</option>
+                    <option value="cemetery">PLG_IP_GP_CEMETERY</option>
+                    <option value="church">PLG_IP_GP_CHURCH</option>
+                    <option value="city_hall">PLG_IP_GP_CITY_HALL</option>
+                    <option value="clothing_store">PLG_IP_GP_CLOTHING_STORE</option>
+                    <option value="convenience_store">PLG_IP_GP_CONVENIENCE_STORE</option>
+                    <option value="courthouse">PLG_IP_GP_COURTHOUSE</option>
+                    <option value="dentist">PLG_IP_GP_DENTIST</option>
+                    <option value="department_store">PLG_IP_GP_DEPARTMENT_STORE</option>
+                    <option value="doctor">PLG_IP_GP_DOCTOR</option>
+                    <option value="electrician">PLG_IP_GP_ELECTRICIAN</option>
+                    <option value="electronics_store">PLG_IP_GP_ELECTRONICS_STORE</option>
+                    <option value="embassy">PLG_IP_GP_EMBASSY</option>
+                    <option value="establishment">PLG_IP_GP_ESTABLISHMENT</option>
+                    <option value="finance">PLG_IP_GP_FINANCE</option>
+                    <option value="fire_station">PLG_IP_GP_FIRE_STATION</option>
+                    <option value="florist">PLG_IP_GP_FLORIST</option>
+                    <option value="food">PLG_IP_GP_FOOD</option>
+                    <option value="funeral_home">PLG_IP_GP_FUNERAL_HOME</option>
+                    <option value="furniture_store">PLG_IP_GP_FURNITURE_STORE</option>
+                    <option value="gas_station">PLG_IP_GP_GAS_STATION</option>
+                    <option value="general_contractor">PLG_IP_GP_GENERAL_CONTRACTOR</option>
+                    <option value="geocode">PLG_IP_GP_GEOCODE</option>
+                    <option value="grocery_or_supermarket">PLG_IP_GP_GROCERY_OR_SUPERMARKET</option>
+                    <option value="gym">PLG_IP_GP_GYM</option>
+                    <option value="hair_care">PLG_IP_GP_HAIR_CARE</option>
+                    <option value="hardware_store">PLG_IP_GP_HARDWARE_STORE</option>
+                    <option value="health">PLG_IP_GP_HEALTH</option>
+                    <option value="hindu_temple">PLG_IP_GP_HINDU_TEMPLE</option>
+                    <option value="home_goods_store">PLG_IP_GP_HOME_GOODS_STORE</option>
+                    <option value="hospital">PLG_IP_GP_HOSPITAL</option>
+                    <option value="insurance_agency">PLG_IP_GP_INSURANCE_AGENCY</option>
+                    <option value="jewelry_store">PLG_IP_GP_JEWELRY_STORE</option>
+                    <option value="laundry">PLG_IP_GP_LAUNDRY</option>
+                    <option value="lawyer">PLG_IP_GP_LAWYER</option>
+                    <option value="library">PLG_IP_GP_LIBRARY</option>
+                    <option value="liquor_store">PLG_IP_GP_LIQUOR_STORE</option>
+                    <option value="local_government_office">PLG_IP_GP_LOCAL_GOVERNMENT_OFFICE</option>
+                    <option value="locksmith">PLG_IP_GP_LOCKSMITH</option>
+                    <option value="lodging">PLG_IP_GP_LODGING</option>
+                    <option value="meal_delivery">PLG_IP_GP_MEAL_DELIVERY</option>
+                    <option value="meal_takeaway">PLG_IP_GP_MEAL_TAKEAWAY</option>
+                    <option value="mosque">PLG_IP_GP_MOSQUE</option>
+                    <option value="movie_rental">PLG_IP_GP_MOVIE_RENTAL</option>
+                    <option value="movie_theater">PLG_IP_GP_MOVIE_THEATER</option>
+                    <option value="moving_company">PLG_IP_GP_MOVING_COMPANY</option>
+                    <option value="museum">PLG_IP_GP_MUSEUM</option>
+                    <option value="night_club">PLG_IP_GP_NIGHT_CLUB</option>
+                    <option value="painter">PLG_IP_GP_PAINTER</option>
+                    <option value="park">PLG_IP_GP_PARK</option>
+                    <option value="parking">PLG_IP_GP_PARKING</option>
+                    <option value="pet_store">PLG_IP_GP_PET_STORE</option>
+                    <option value="pharmacy">PLG_IP_GP_PHARMACY</option>
+                    <option value="physiotherapist">PLG_IP_GP_PHYSIOTHERAPIST</option>
+                    <option value="place_of_worship">PLG_IP_GP_PLACE_OF_WORSHIP</option>
+                    <option value="plumber">PLG_IP_GP_PLUMBER</option>
+                    <option value="police">PLG_IP_GP_POLICE</option>
+                    <option value="post_office">PLG_IP_GP_POST_OFFICE</option>
+                    <option value="real_estate_agency">PLG_IP_GP_REAL_ESTATE_AGENCY</option>
+                    <option value="restaurant">PLG_IP_GP_RESTAURANT</option>
+                    <option value="roofing_contractor">PLG_IP_GP_ROOFING_CONTRACTOR</option>
+                    <option value="rv_park">PLG_IP_GP_RV_PARK</option>
+                    <option value="school">PLG_IP_GP_SCHOOL</option>
+                    <option value="shoe_store">PLG_IP_GP_SHOE_STORE</option>
+                    <option value="shopping_mall">PLG_IP_GP_SHOPPING_MALL</option>
+                    <option value="spa">PLG_IP_GP_SPA</option>
+                    <option value="stadium">PLG_IP_GP_STADIUM</option>
+                    <option value="storage">PLG_IP_GP_STORAGE</option>
+                    <option value="store">PLG_IP_GP_STORE</option>
+                    <option value="subway_station">PLG_IP_GP_SUBWAY_STATION</option>
+                    <option value="synagogue">PLG_IP_GP_SYNAGOGUE</option>
+                    <option value="taxi_stand">PLG_IP_GP_TAXI_STAND</option>
+                    <option value="train_station">PLG_IP_GP_TRAIN_STATION</option>
+                    <option value="travel_agency">PLG_IP_GP_TRAVEL_AGENCY</option>
+                    <option value="university">PLG_IP_GP_UNIVERSITY</option>
+                    <option value="veterinary_care">PLG_IP_GP_VETERINARY_CARE</option>
+                    <option value="zoo">PLG_IP_GP_ZOO</option>
+                </field>
+                <field name="gplanguage" type="list" default="" label="PLG_IP_GP_LANGUAGE_LABEL" description="PLG_IP_GP_LANGUAGE_DESC">
+                    <option value="">PLG_IP_GP_DEFAULT</option>
+                    <option value="ar">Arabic</option>
+                    <option value="eu">Basque</option>
+                    <option value="bg">Bulgarian</option>
+                    <option value="bn">Bengali</option>
+                    <option value="ca">Catalan</option>
+                    <option value="cs">Czech</option>
+                    <option value="da">Danish</option>
+                    <option value="de">German</option>
+                    <option value="el">Greek</option>
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fa">Farsi</option>
+                    <option value="fi">Finnish</option>
+                    <option value="fil">Filipino</option>
+                    <option value="fr">French</option>
+                    <option value="gl">Galician</option>
+                    <option value="gu">Gujarati</option>
+                    <option value="hi">Hindi</option>
+                    <option value="hr">Croatian</option>
+                    <option value="hu">Hungarian</option>
+                    <option value="id">Indonesian</option>
+                    <option value="it">Italian</option>
+                    <option value="iw">Hebrew</option>
+                    <option value="ja">Japanese</option>
+                    <option value="kn">Kannada</option>
+                    <option value="ko">Korean</option>
+                    <option value="lt">Lithuanian</option>
+                    <option value="lv">Latvian</option>
+                    <option value="ml">Malayalam</option>
+                    <option value="mr">Marathi</option>
+                    <option value="nl">Dutch</option>
+                    <option value="no">Norwegian</option>
+                    <option value="pl">Polish</option>
+                    <option value="pt">Portuguese</option>
+                    <option value="pt-BR">Portuguese (Brazil)</option>
+                    <option value="pt-PT">Portuguese (Portugal)</option>
+                    <option value="ro">Romanian</option>
+                    <option value="ru">Russian</option>
+                    <option value="sk">Slovak</option>
+                    <option value="sl">Slovenian</option>
+                    <option value="sr">Serbian</option>
+                    <option value="tl">Tagalog</option>
+                    <option value="ta">Tamil</option>
+                    <option value="te">Teluga</option>
+                    <option value="th">Thai</option>
+                    <option value="tr">Turkish</option>
+                    <option value="uk">Ukranian</option>
+                    <option value="vi">Vietnamese</option>
+                    <option value="zh-CN">Chinese (Simplified)</option>
+                    <option value="zh-TW">Chinese (Traditional)</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

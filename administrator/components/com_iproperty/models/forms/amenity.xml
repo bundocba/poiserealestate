@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+        <field name="title" type="text" class="inputbox" label="COM_IPROPERTY_TITLE" description="" />
+        <field name="cat" type="amenitycat" class="inputbox" label="COM_IPROPERTY_CATEGORY" description="" />
+        <field name="amenlist" type="amenity" class="inputbox" label="COM_IPROPERTY_ADD" description="" />
+    </fieldset>
+</form>

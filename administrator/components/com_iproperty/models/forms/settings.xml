@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general_settings" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="inputbox" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- general settings -->
+        <field name="offline" type="radio" class="btn-group" label="COM_IPROPERTY_OFFLINE" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field> 
+        <field name="offmessage" type="textarea" class="inputbox" rows="5" cols="30" label="COM_IPROPERTY_OFFLINE_MESSAGE" description="" filter="JComponentHelper::filterText" />
+        <field name="showtitle" type="radio" class="btn-group" label="COM_IPROPERTY_PROPERTY_USE_TITLE" description="COM_IPROPERTY_PROPERTY_USE_TITLE_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="street_num_pos" type="radio" class="btn-group" label="COM_IPROPERTY_STREET_NUM_POS" description="COM_IPROPERTY_STREET_NUM_POS_TIP" filter="intval" size="1" default="1">
+			<option value="0">COM_IPROPERTY_BEFORE</option>
+			<option value="1">COM_IPROPERTY_AFTER</option>
+        </field>
+        <field name="measurement_units" type="radio" class="btn-group" label="COM_IPROPERTY_MEASUREMENT_TYPE" description="COM_IPROPERTY_MEASUREMENT_TYPE_TIP" filter="intval" size="1" default="0">
+			<option value="0">COM_IPROPERTY_SQFT</option>
+			<option value="1">COM_IPROPERTY_SQM</option>
+        </field>
+        <field name="baths_fraction" type="radio" class="btn-group" label="COM_IPROPERTY_FULL_FRACTIONAL_BATHS" description="COM_IPROPERTY_FULL_FRACTIONAL_BATHS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="new_days" type="inputbox" class="inputbox" size="2" label="COM_IPROPERTY_NEW_DAYS" description="COM_IPROPERTY_NEW_DAYS_TIP" default="7" />
+        <field name="updated_days" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_UPDATED_DAYS" description="COM_IPROPERTY_UPDATED_DAYS_TIP" default="7" />
+        <field name="rss" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_RSS_ITEMS" description="COM_IPROPERTY_RSS_TIP" default="100" />
+        <field name="banner_display" type="radio" class="btn-group" label="COM_IPROPERTY_BANNER_DISPLAY" description="COM_IPROPERTY_BANNER_DISPLAY_TIP" size="1" default="1">
+			<option value="1">COM_IPROPERTY_IMAGES</option>
+			<option value="2">COM_IPROPERTY_CSS</option>
+            <option value="3">COM_IPROPERTY_NONE</option>
+        </field>
+        <field name="accent" type="color" class="inputbox" size="5" label="COM_IPROPERTY_ACCENT_COLOR" description="COM_IPROPERTY_ACCENT_TIP" />
+        <field name="secondary_accent" type="color" class="inputbox" size="5" label="COM_IPROPERTY_SECONDARY_COLOR" description="COM_IPROPERTY_ACCENT_TIP" />
+        <field name="force_accents" type="radio" class="btn-group" label="COM_IPROPERTY_FORCE_ACCENTS" description="COM_IPROPERTY_FORCE_ACCENTS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="require_login" type="radio" class="btn-group" label="COM_IPROPERTY_REQUIRE_LOGIN" description="COM_IPROPERTY_REQUIRE_LOGIN_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="edit_rights" type="list" class="inputbox" label="COM_IPROPERTY_EDIT_RIGHTS" description="COM_IPROPERTY_EDIT_RIGHTS_TIP" filter="intval" size="1" default="0">
+			<option value="0">COM_IPROPERTY_DISABLED</option>
+			<option value="1">COM_IPROPERTY_COMPANY</option>
+            <option value="2">COM_IPROPERTY_AGENT</option>
+            <option value="3">COM_IPROPERTY_NONE</option>
+        </field>
+        <field name="auto_publish" type="radio" class="btn-group" label="COM_IPROPERTY_AUTO_PUBLISH" description="COM_IPROPERTY_AUTO_PUBLISH_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="approval_level" type="radio" class="btn-group" label="COM_IPROPERTY_APPROVAL_LEVEL" description="COM_IPROPERTY_APPROVAL_LEVEL_TIP" filter="intval" size="1" default="0">
+			<option value="0">JADMINISTRATOR</option>
+			<option value="1">COM_IPROPERTY_SUPER_AGENT</option>
+        </field>
+        <field name="notify_newprop" type="radio" class="btn-group" label="COM_IPROPERTY_NOTIFICATIONS" description="COM_IPROPERTY_NOTIFICATIONS_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="moderate_listings" type="radio" class="btn-group" label="COM_IPROPERTY_MODERATE" description="COM_IPROPERTY_MODERATE_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="auto_agent" type="radio" class="btn-group" label="COM_IPROPERTY_AUTO_AGENT" description="COM_IPROPERTY_AUTO_AGENT_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+        <field name="footer" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_FOOTER" description="COM_IPROPERTY_FOOTER_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <!-- right column general settings -->
+        <field name="default_currency" type="currencies" class="inputbox" label="COM_IPROPERTY_DEFAULT_CURRENCY" description="COM_IPROPERTY_DEFAULT_CURRENCY_TIP" />
+        <field name="currency" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_CURRENCY_SYMBOL" description="COM_IPROPERTY_CURRENCY_TIP" default="$" />
+        <field name="currency_digits" type="inputbox" class="inputbox" size="1" maxlength="1" label="COM_IPROPERTY_DECIMAL_DIGITS" description="COM_IPROPERTY_DECIMAL_DIGITS_TIP" default="1" />
+        <field name="nformat" type="list" class="inputbox" label="COM_IPROPERTY_NUMBER_FORMAT" description="COM_IPROPERTY_NUMBER_FORMAT_TIP" filter="intval" size="1" default="0">
+			<option value="0">19.999,00</option>
+			<option value="1">19,999.00</option>
+        </field>
+        <field name="currency_pos" type="radio" class="btn-group" label="COM_IPROPERTY_CURRENCY_POSITION" description="" filter="intval" size="1" default="0">
+			<option value="0">COM_IPROPERTY_BEFORE</option>
+			<option value="1">COM_IPROPERTY_AFTER</option>
+        </field>
+        <!-- defaults -->
+        <field name="default_company" type="company" class="inputbox" label="COM_IPROPERTY_DEFAULT_COMPANY" description="COM_IPROPERTY_DEFAULT_COMPANY_TIP" />
+        <field name="default_agent" type="agent" class="inputbox" label="COM_IPROPERTY_DEFAULT_AGENT" description="COM_IPROPERTY_DEFAULT_AGENT_TIP" />
+        <field name="default_category" type="ipcategory" class="inputbox" label="COM_IPROPERTY_DEFAULT_CATEGORY" description="COM_IPROPERTY_DEFAULT_CATEGORY_TIP" />
+        <field name="default_state" type="locstate" class="inputbox" label="COM_IPROPERTY_DEFAULT_STATE" description="COM_IPROPERTY_DEFAULT_STATE_TIP" />
+        <field name="default_country" type="country" class="inputbox" label="COM_IPROPERTY_DEFAULT_COUNTRY" description="COM_IPROPERTY_DEFAULT_COUNTRY_TIP" />
+        <field name="default_c_sort" type="companysortby" class="inputbox" label="COM_IPROPERTY_DEFAULT_COMPANY_SORT" description="COM_IPROPERTY_DEFAULT_SORT_TIP" />
+        <field name="default_c_order" type="orderby" class="inputbox" label="COM_IPROPERTY_DEFAULT_COMPANY_ORDER" description="COM_IPROPERTY_DEFAULT_ORDER_TIP" />
+        <field name="default_a_sort" type="agentsortby" class="inputbox" label="COM_IPROPERTY_DEFAULT_AGENT_SORT" description="COM_IPROPERTY_DEFAULT_SORT_TIP" />
+        <field name="default_a_order" type="orderby" class="inputbox" label="COM_IPROPERTY_DEFAULT_AGENT_ORDER" description="COM_IPROPERTY_DEFAULT_ORDER_TIP" />
+        <field name="default_p_sort" type="sortby" class="inputbox" label="COM_IPROPERTY_DEFAULT_PROPERTY_SORT" description="COM_IPROPERTY_DEFAULT_SORT_TIP" />
+        <field name="default_p_order" type="orderby" class="inputbox" label="COM_IPROPERTY_DEFAULT_PROPERTY_ORDER" description="COM_IPROPERTY_DEFAULT_ORDER_TIP" />
+        <!-- Other -->
+        <field name="hard404" type="radio" class="btn-group" label="COM_IPROPERTY_HARD404" description="COM_IPROPERTY_HARD404_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="bootstrap_css" type="radio" class="btn-group" label="COM_IPROPERTY_BOOTSTRAP_CSS" description="COM_IPROPERTY_BOOTSTRAP_CSS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="ip_router" type="radio" class="btn-group" label="COM_IPROPERTY_IP_ROUTER" description="COM_IPROPERTY_IP_ROUTER_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <!-- CATEGORY SETTINGS -->
+    <fieldset name="category_settings" addfieldpath="/administrator/components/com_iproperty/models/fields">
+        <field name="cat_photo_width" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_CATEGORY_PHOTO_WIDTH" description="COM_IPROPERTY_CATEGORY_PHOTO_WIDTH_TIP" default="90" />
+        <field name="iplayout" type="list" class="inputbox" label="COM_IPROPERTY_CATEGORY_LAYOUT" description="COM_IPROPERTY_CAT_TIP" filter="intval" size="1" default="1">
+			<option value="1">COM_IPROPERTY_ONE_COLUMN</option>
+			<option value="2">COM_IPROPERTY_TWO_COLUMNS</option>
+            <option value="3">COM_IPROPERTY_THREE_COLUMNS</option>
+            <option value="4">COM_IPROPERTY_FOUR_COLUMNS</option>
+        </field>
+        <field name="show_scats" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_SUBCATEGORIES" description="COM_IPROPERTY_SCAT_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="cat_recursive" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_SUBCATEGORIES_RECURSIVE" description="COM_IPROPERTY_SCAT_RECURSIVE_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="cat_entries" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_CATEGORY_ENTRIES" description="COM_IPROPERTY_CAT_ENTRIES_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <!-- PROPERTY SETTINGS -->
+    <fieldset name="property_settings" addfieldpath="/administrator/components/com_iproperty/models/fields">
+        <field name="perpage" type="list" class="inputbox" label="COM_IPROPERTY_PROPERTIES_PER_PAGE" description="COM_IPROPERTY_PER_PAGE_TIP" filter="intval" size="1" default="10">
+			<option value="5">J5</option>
+			<option value="10">J10</option>
+            <option value="20">J20</option>
+            <option value="50">J50</option>
+            <option value="100">J100</option>
+        </field>
+        <field name="show_featured" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_FEATURED" description="COM_IPROPERTY_SHOW_FEATURED_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="featured_pos" type="radio" class="btn-group" label="COM_IPROPERTY_FEATURED_POSITION" description="COM_IPROPERTY_FEATURED_PROPERTIES_POSITION" filter="intval" size="1" default="1">
+			<option value="0">COM_IPROPERTY_TOP</option>
+			<option value="1">COM_IPROPERTY_BOTTOM</option>
+        </field>
+        <field name="num_featured" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_NUMBER_OF_FEATURED" description="" filter="intval" default="5" />        
+        <field name="featured_accent" type="color" class="inputbox" size="5" label="COM_IPROPERTY_FEATURED_PROPERTY_ACCENT_COLOR" description="COM_IPROPERTY_ACCENT_TIP" />
+        <field name="overview_char" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_PROP_OVERVIEW_CHAR" description="COM_IPROPERTY_PROP_OVERVIEW_CHAR_TIP" filter="intval" default="200" />
+		<field name="show_requestshowing" type="radio" class="btn-group" label="COM_IPROPERTY_REQUEST_SHOWING" description="COM_IPROPERTY_REQUEST_SHOWING_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="form_recipient" type="list" class="inputbox" label="COM_IPROPERTY_SEND_REQUESTS_TO" description="COM_IPROPERTY_SEND_REQUESTS_TO_TIP" filter="intval" size="1" default="0">
+			<option value="0">COM_IPROPERTY_SITE_ADMIN</option>
+			<option value="1">COM_IPROPERTY_AGENT</option>
+            <option value="2">COM_IPROPERTY_COMPANY</option>
+			<option value="3">COM_IPROPERTY_AGENT_AND_COMPANY</option>
+        </field>
+        <field name="form_copyadmin" type="radio" class="btn-group" label="COM_IPROPERTY_COPY_ADMIN" description="COM_IPROPERTY_COPY_ADMIN_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <!-- TOOLBAR SETTINGS -->
+    <fieldset name="toolbar_settings">
+        <field name="show_sendtofriend" type="radio" class="btn-group" label="COM_IPROPERTY_MAIL_TO_FRIEND" description="COM_IPROPERTY_MTF_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="notify_sendfriend" type="radio" class="btn-group" label="COM_IPROPERTY_NOTIFY_SENDFRIEND" description="COM_IPROPERTY_NOTIFY_SENDFRIEND_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_print" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_PRINT" description="COM_IPROPERTY_SHOW_PRINT_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_saveproperty" type="radio" class="btn-group" label="COM_IPROPERTY_SAVE_PROPERTY" description="COM_IPROPERTY_SAVE_PROPERTY_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_propupdate" type="radio" class="btn-group" label="COM_IPROPERTY_EMAIL_UPDATE" description="COM_IPROPERTY_EMAIL_UPDATE_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="notify_saveprop" type="radio" class="btn-group" label="COM_IPROPERTY_NOTIFY_SAVEPROP" description="COM_IPROPERTY_NOTIFY_SAVEPROP_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_mtgcalc" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_MTG_CALC" description="COM_IPROPERTY_SHOW_MTG_CALC_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>   
+        <field name="show_hits" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_HITS" description="COM_IPROPERTY_SHOW_HITS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <!-- AGENT SETTINGS -->
+    <fieldset name="agent_settings">   
+        <field name="show_agent" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_photo_width" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_AGENT_PHOTO_WIDTH" description="" default="90" />
+        <field name="agent_show_image" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_IMAGE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+        <field name="agent_show_address" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_ADDRESS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_contact" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_CONTACT" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_email" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_EMAIL" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_phone" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_PHONE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_mobile" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_MOBILE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_fax" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_FAX" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_website" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_WEB" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_social" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AGENT_SOCIAL" description="COM_IPROPERTY_SHOW_AGENT_SOCIAL_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_license" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LICENSE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_show_featured" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_FEATURED" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="agent_feat_num" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_NUMBER_OF_FEATURED" description="" filter="intval" default="5" />
+        <field name="agent_feat_pos" type="radio" class="btn-group" label="COM_IPROPERTY_FEATURED_POSITION" description="COM_IPROPERTY_FEATURED_PROPERTIES_POSITION" filter="intval" size="1" default="1">
+			<option value="0">COM_IPROPERTY_TOP</option>
+			<option value="1">COM_IPROPERTY_BOTTOM</option>
+        </field>
+    </fieldset>
+    <!-- COMPANY SETTINGS -->
+    <fieldset name="company_settings"> 
+        <field name="company_photo_width" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_COMPANY_PHOTO_WIDTH" description="" default="90" />
+        <field name="co_show_image" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_IMAGE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+        <field name="co_show_address" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_ADDRESS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_contact" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_CONTACT" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_email" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_EMAIL" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_phone" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_PHONE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_fax" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_FAX" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_website" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COMPANY_WEB" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_license" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LICENSE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_show_featured" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_FEATURED" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="co_feat_num" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_NUMBER_OF_FEATURED" description="" filter="intval" default="5" />
+        <field name="co_feat_pos" type="radio" class="btn-group" label="COM_IPROPERTY_FEATURED_POSITION" description="COM_IPROPERTY_FEATURED_PROPERTIES_POSITION" filter="intval" size="1" default="1">
+			<option value="0">COM_IPROPERTY_TOP</option>
+			<option value="1">COM_IPROPERTY_BOTTOM</option>
+        </field>
+    </fieldset>
+    <!-- QUICK SEARCH SETTINGS -->
+    <fieldset name="quicksearch_settings"> 
+        <field name="qs_show_keyword" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_KEYWORD" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_cat" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_CAT" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_stype" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_STYPE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_country" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_COUNTRY" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>       
+        <field name="qs_show_state" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_STATE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_province" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_PROVINCE" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_county" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COUNTY" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_region" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_REGION" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_city" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_CITY" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_minbeds" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_MINBEDS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_minbaths" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_MINBATHS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_price" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_PRICE" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="qs_show_sqft" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW_SQFT" description="" filter="intval" size="1" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+    <!-- ADVSEARCH SETTINGS -->
+    <fieldset name="advsearch_settings">
+        <field name="adv_perpage" type="list" class="inputbox" label="COM_IPROPERTY_PROPERTIES_PER_PAGE" description="COM_IPROPERTY_PER_PAGE_TIP" filter="intval" size="1" default="10">
+			<option value="5">J5</option>
+			<option value="10">J10</option>
+            <option value="20">J20</option>
+            <option value="50">J50</option>
+            <option value="100">J100</option>
+			<option value="150">J150</option>
+			<option value="200">J200</option>
+			<option value="250">J250</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+        </field>
+        <field name="adv_nolimit" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_NO_LIMIT" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_price_low" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_PRICE_LOW" description="" default="50000" />
+        <field name="adv_price_high" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_PRICE_HIGH" description="" default="500000" />
+        <field name="adv_beds_low" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BEDS_LOW" description="" default="0" />
+        <field name="adv_beds_high" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BEDS_HIGH" description="" default="10" />
+        <field name="adv_baths_low" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BATHS_LOW" description="" default="0" />
+        <field name="adv_baths_high" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BATHS_HIGH" description="" default="10" />
+        <field name="adv_sqft_low" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_SQFT_LOW" description="" default="800" />
+        <field name="adv_sqft_high" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_ADV_SQFT_HIGH" description="" default="10000" />        
+        <field name="adv_default_lat" type="inputbox" class="inputbox" size="20" label="COM_IPROPERTY_ADV_DEFAULT_LAT" description="" default="47.6725282" />
+        <field name="adv_default_long" type="inputbox" class="inputbox" size="20" label="COM_IPROPERTY_ADV_DEFAULT_LONG" description="" default="-116.7679661" />
+        <field name="adv_default_zoom" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_ADV_DEFAULT_ZOOM" description="" default="10" />
+        <field name="adv_maptype" type="list" class="inputbox" label="COM_IPROPERTY_ADV_DEFAULT_MAPTYPE" description="" size="1">
+			<option value="HYBRID">HYBRID</option>
+			<option value="ROADMAP">ROADMAP</option>
+            <option value="SATELLITE">SATELLITE</option>
+            <option value="TERRAIN">TERRAIN</option>
+        </field>
+        <field name="show_savesearch" type="radio" class="btn-group" label="COM_IPROPERTY_SAVE_SEARCH" description="COM_IPROPERTY_SAVE_SEARCH_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_searchupdate" type="radio" class="btn-group" label="COM_IPROPERTY_EMAIL_UPDATE" description="COM_IPROPERTY_EMAIL_UPDATE_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <!-- ADVSARCH CRITERIA -->
+        <field name="adv_show_shapetools" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_SHAPETOOLS" description="COM_IPROPERTY_ADV_SHOW_SHAPETOOLS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+		<field name="adv_show_clusterer" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_CLUSTERER" description="COM_IPROPERTY_ADV_SHOW_CLUSTERER_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_amen" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_AMEN" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_hoa" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_HOA" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_reo" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_REO" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_wf" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_WF" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_stype" type="radio" class="btn-group" label="COM_IPROPERTY_ADV_SHOW_STYPE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_country" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COUNTRY" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_locstate" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_STATE" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_province" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_PROVINCE" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_county" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_COUNTY" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_region" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_REGION" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="adv_show_city" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_CITY" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+    </fieldset>
+    <!-- GALLERY SETTINGS -->
+    <fieldset name="gallery_settings">
+        <field name="gallerytype" type="list" class="inputbox" label="COM_IPROPERTY_GALLERY_TYPE" description="COM_IPROPERTY_GALLERY_TYPE_TIP" filter="intval" size="1" default="5">
+			<option value="1">COM_IPROPERTY_LIGHTBOX</option>
+            <option value="3">COM_IPROPERTY_SERIE3</option>
+            <option value="4">COM_IPROPERTY_CAROUFREDSEL</option>
+            <option value="5">COM_IPROPERTY_BOOTSTRAP</option>
+            <option value="6">NIVO</option>
+            <option value="7">Flex Slider</option>
+            <option value="8">NIVO Slider</option>
+        </field>
+        <field name="gallery_width" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_GALLERY_WIDTH" description="" default="710" />  
+        <field name="gallery_height" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_GALLERY_HEIGHT" description="" default="300" /> 
+        <field name="imgpath" type="inputbox" class="inputbox" readonly="true" size="50" label="COM_IPROPERTY_IMAGE_PATH" description="" />
+        <field name="maximgs" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_MAX_IMAGES_PER_PROPERTY" description="" filter="intval" default="10" />
+        <field name="maximgsize" type="inputbox" class="inputbox" size="5" label="COM_IPROPERTY_MAX_IMAGE_SIZE" description="" filter="intval" default="7000" />
+        <field name="gplibrary" type="list" class="inputbox" label="COM_IPROPERTY_GRAPHICS_LIBRARY" description="" size="1" default="gd2">
+			<option value="0">COM_IPROPERTY_NONE</option>
+			<option value="gd">COM_IPROPERTY_GD</option>
+            <option value="gd2">GD2</option>
+        </field>
+        <!-- OPTIMIZATION -->
+        <field name="imgwidth" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_RESIZE_IMAGES_TO" description="" default="710" /> 
+        <field name="imgheight" type="inputbox" class="inputbox" size="10" label="" description="" default="0" /> 
+        <field name="imgproportion" type="radio" class="btn-group" label="COM_IPROPERTY_CONSTRAIN_PROPORTIONS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="thumbwidth" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_RESIZE_THUMBS_TO" description="" default="200" /> 
+        <field name="thumbheight" type="inputbox" class="inputbox" size="10" label="" description="" default="0" /> 
+        <field name="thumbproportion" type="radio" class="btn-group" label="COM_IPROPERTY_CONSTRAIN_PROPORTIONS" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="imgquality" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_IMAGE_QUALITY" description="" default="80" /> 
+        <field name="thumbquality" type="inputbox" class="inputbox" size="10" label="COM_IPROPERTY_THUMB_QUALITY" description="" default="100" /> 
+        <field name="watermark" type="radio" class="btn-group" label="COM_IPROPERTY_WATERMARK" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="watermark_text" type="inputbox" class="inputbox" size="40" label="COM_IPROPERTY_WATERMARK_TEXT" description="" />
+    </fieldset>
+    <!-- MISC SETTINGS -->
+    <fieldset name="misc_settings">
+        <field name="disclaimer" type="textarea" class="inputbox" rows="5" cols="30" label="COM_IPROPERTY_DISCLAIMER" description="" filter="JComponentHelper::filterText" />
+        <field name="map_provider" type="list" class="inputbox" label="COM_IPROPERTY_MAP_PROVIDER" description="" filter="intval" size="1" default="1">
+			<option value="0">COM_IPROPERTY_NONE</option>
+			<option value="1">COM_IPROPERTY_GOOGLE</option>
+            <option value="2">COM_IPROPERTY_BING</option>
+        </field>
+        <field name="map_locale" type="list" class="inputbox" label="COM_IPROPERTY_MAP_LOCALE" description="COM_IPROPERTY_MAP_LOCALE_DESC" size="1" default="">
+			<option value="">NONE</option>
+            <option value="ar">ARABIC</option>
+			<option value="eu">BASQUE</option>
+			<option value="bg">BULGARIAN</option>
+			<option value="bn">BENGALI</option>
+			<option value="ca">CATALAN</option>
+			<option value="cs">CZECH</option>
+			<option value="da">DANISH</option>
+			<option value="de">GERMAN</option>
+			<option value="el">GREEK</option>
+			<option value="en">ENGLISH</option>
+			<option value="en-AU">ENGLISH (AUSTRALIAN)</option>
+			<option value="en-GB">ENGLISH (GREAT BRITAIN)</option>
+			<option value="es">SPANISH</option>
+			<option value="eu">BASQUE</option>
+			<option value="fa">FARSI</option>
+			<option value="fi">FINNISH</option>
+			<option value="fil">FILIPINO</option>
+			<option value="fr">FRENCH</option>
+			<option value="gl">GALICIAN</option>
+			<option value="gu">GUJARATI</option>
+			<option value="hi">HINDI</option>
+			<option value="hr">CROATIAN</option>
+			<option value="hu">HUNGARIAN</option>
+			<option value="id">INDONESIAN</option>
+			<option value="it">ITALIAN</option>
+			<option value="iw">HEBREW</option>
+			<option value="ja">JAPANESE</option>
+			<option value="kn">KANNADA</option>
+			<option value="ko">KOREAN</option>
+			<option value="lt">LITHUANIAN</option>
+			<option value="lv">LATVIAN</option>
+			<option value="ml">MALAYALAM</option>
+			<option value="mr">MARATHI</option>
+			<option value="nl">DUTCH</option>
+			<option value="nn">NORWEGIAN NYNORSK</option>
+			<option value="no">NORWEGIAN</option>
+			<option value="or">ORIYA</option>
+			<option value="pl">POLISH</option>
+			<option value="pt">PORTUGUESE</option>
+			<option value="pt-BR">PORTUGUESE (BRAZIL)</option>
+			<option value="pt-PT">PORTUGUESE (PORTUGAL)</option>
+			<option value="rm">ROMANSCH</option>
+			<option value="ro">ROMANIAN</option>
+			<option value="ru">RUSSIAN</option>
+			<option value="sk">SLOVAK</option>
+			<option value="sl">SLOVENIAN</option>
+			<option value="sr">SERBIAN</option>
+			<option value="sv">SWEDISH</option>
+			<option value="tl">TAGALOG</option>
+			<option value="ta">TAMIL</option>
+			<option value="te">TELUGU</option>
+			<option value="th">THAI</option>
+			<option value="tr">TURKISH</option>
+			<option value="uk">UKRAINIAN</option>
+			<option value="vi">VIETNAMESE</option>
+			<option value="zh-CN">CHINESE (SIMPLIFIED)</option>
+			<option value="zh-TW">CHINESE (TRADITIONAL)</option>
+        </field>
+        <field name="map_credentials" type="inputbox" class="inputbox" size="40" label="COM_IPROPERTY_MAP_CREDENTIALS" description="COM_IPROPERTY_MAP_CREDENTIALS_DESC" />
+        <field name="max_zoom" type="integer" class="inputbox" label="COM_IPROPERTY_GMAP_MAXZOOM" description="COM_IPROPERTY_GMAPZOOM_TIP" filter="intval" first="12" last="21" step="1" default="13" />
+        <field name="feed_show" type="radio" class="btn-group" label="COM_IPROPERTY_FEED_ENABLE" description="COM_IPROPERTY_FEED_ENABLE_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="feed_admin" type="radio" class="btn-group" label="COM_IPROPERTY_ADMIN_FEED" description="COM_IPROPERTY_ADMIN_FEED_DESC" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="request" addrulepath="components/com_iproperty/models/rules">
+		<field name="sender_name"
+			type="text"
+			id="ip_sender_name_req"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_NAME"
+			filter="string"
+			required="true"
+		/>
+		<field name="sender_email"
+			type="email"
+			id="ip_sender_email_req"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_EMAIL"
+			filter="string"
+			validate="ipropertyemail"
+			required="true"
+		/>
+		<field name="sender_dphone"
+			type="text"
+			id="ip_sender_dphone_req"
+			size="60"
+			description=""
+			label="COM_IPROPERTY_DAY_PHONE"
+			filter="string"	
+		/>
+        <field name="sender_ephone"
+			type="text"
+			id="ip_sender_ephone_req"
+			size="60"
+			description=""
+			label="COM_IPROPERTY_EVENING_PHONE"
+			filter="string"	
+		/>
+        <field name="sender_preference" type="list" class="inputbox" id="ip_sender_preference_req" label="COM_IPROPERTY_CONTACT_PREFERENCE" description="" filter="string" size="1" default="COM_IPROPERTY_EITHER">
+			<option value="COM_IPROPERTY_PHONE">COM_IPROPERTY_PHONE</option>
+			<option value="COM_IPROPERTY_EMAIL">COM_IPROPERTY_EMAIL</option>
+            <option value="COM_IPROPERTY_EITHER">COM_IPROPERTY_EITHER</option>
+        </field>
+        <field name="sender_ctime" type="list" class="inputbox" id="ip_sender_ctime_req" label="COM_IPROPERTY_CONTACT_TIME" description="" filter="string" size="1" default="COM_IPROPERTY_EITHER">
+			<option value="COM_IPROPERTY_MORNING">COM_IPROPERTY_MORNING</option>
+			<option value="COM_IPROPERTY_AFTERNOON">COM_IPROPERTY_AFTERNOON</option>
+            <option value="COM_IPROPERTY_NIGHT">COM_IPROPERTY_NIGHT</option>
+        </field>
+		<field name="special_requests"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="ip_special_requests_req"
+			description=""
+			label="COM_IPROPERTY_SPECIAL_REQUESTS"
+			filter="htmlsafe"
+            validate="ipropertyemailmessage"
+            required="true"
+		/>
+		<field name="copy_me"
+			type="checkbox"
+			id="ip_copy_me_req"
+			description=""
+			label="COM_IPROPERTY_COPY_ME_EMAIL"
+			default="0"
+		/>
+	</fieldset>
+    <fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_IPROPERTY_CAPTCHA_LABEL"
+			description="COM_IPROPERTY_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="requestform"
+		/>
+	</fieldset>
+</form>

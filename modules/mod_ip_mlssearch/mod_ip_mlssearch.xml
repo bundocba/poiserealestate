@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>IP MLS Search</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>This module will display a search box for searching on an Intellectual Property listing ID (Reference #)</description>
+	<files>
+		<filename module="mod_ip_mlssearch">mod_ip_mlssearch.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_mlssearch.ini</language>
+    </languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field
+					name="pretext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_IP_MLSSEARCH_FIELD_PRE_TEXT_LABEL"
+					description="MOD_IP_MLSSEARCH_FIELD_PRE_TEXT_DESC" />
+				<field
+					name="posttext"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="MOD_IP_MLSSEARCH_FIELD_POST_TEXT_LABEL"
+					description="MOD_IP_MLSSEARCH_FIELD_POST_TEXT_DESC" />
+                <field name="dkeyword" type="text" default="" label="MOD_IP_MLSSEARCH_KEYWORD_TEXT" description="MOD_IP_MLSSEARCH_KEYWORD_DESC" />
+                <field name="dsearch" type="text" default="" label="MOD_IP_MLSSEARCH_SEARCH_TEXT" description="MOD_IP_MLSSEARCH_SEARCH_DESC" />                
+                <field name="autocomplete" type="radio" class="btn-group" default="0" label="MOD_IP_MLSSEARCH_AUTOCOMPLETE" description="MOD_IP_MLSSEARCH_AUTOCOMPLETE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="autocomplete_num" type="integer" default="5" first="5" last="20" step="5" label="MOD_IP_MLSSEARCH_AUTOCOMPLETE_NUM" description="MOD_IP_MLSSEARCH_AUTOCOMPLETE_NUM_DESC" />
+            </fieldset>
+            <fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="cache" type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field name="cache_time" type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

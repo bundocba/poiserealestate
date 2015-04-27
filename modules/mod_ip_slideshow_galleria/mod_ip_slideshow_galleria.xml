@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>IP Slideshow Galleria</name>
+    <author>The Thinkery, LLC</author>
+    <creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>info@thethinkery.net</authorEmail>
+    <authorUrl>www.thethinkery.net</authorUrl>
+    <version>3.3.1</version>
+    <description>IP Slideshow (Galleria) module</description>
+    <files>
+        <filename module="mod_ip_slideshow_galleria">mod_ip_slideshow_galleria.php</filename>
+        <filename>CHANGELOG.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl/</folder>
+        <folder>assets/</folder>
+    </files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_slideshow_galleria.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="" type="header" default="MOD_IP_GALLERIA_IPROPERTY_SETTINGS" label="" description="" />
+                <field name="cat_id" type="ipcategory" default="0" label="MOD_IP_GALLERIA_CATEGORY" description="MOD_IP_GALLERIA_CATEGORY_DESC" />
+                <field name="cat_subcats" type="radio" class="btn-group" default="0" label="MOD_IP_GALLERIA_SUBCATS" description="MOD_IP_GALLERIA_SUBCATS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="prop_stype" type="stypes" default="0" label="MOD_IP_GALLERIA_STYPE" description="MOD_IP_GALLERIA_STYPE_DESC" />
+                                
+                
+                <field name="" type="header" default="MOD_IP_GALLERIA_GENERAL_SLIDESHOW_SETTINGS" label="" description="" /> 
+                <!-- applies to both slide shows -->
+                <field name="slideshow_type" type="radio" class="btn-group" default="0" label="MOD_IP_GALLERIA_SLIDESHOW_TYPE" description="MOD_IP_GALLERIA_SLIDESHOW_TYPE_DESC">
+                    <option value="0">MOD_IP_GALLERIA_GALLERIA</option>
+                    <option value="1">MOD_IP_GALLERIA_ORIGINAL</option>
+                </field>
+                <field name="price" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_SHOWPRICE" description="MOD_IP_GALLERIA_SHOWPRICE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="featured" type="radio" class="btn-group" default="0" label="MOD_IP_GALLERIA_SHOWFEATURED" description="MOD_IP_GALLERIA_SHOWFEATURED_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="count" type="text" default="5" label="MOD_IP_GALLERIA_COUNT" description="MOD_IP_GALLERIA_COUNT_DESC" />
+                <field name="ordering" type="list" default="5" label="MOD_IP_GALLERIA_ORDER" description="MOD_IP_GALLERIA_ORDER_DESC">
+                    <option value="1">MOD_IP_GALLERIA_PRICE_ASC</option>
+                    <option value="2">MOD_IP_GALLERIA_PRICE_DESC</option>
+                    <option value="3">MOD_IP_GALLERIA_TITLE_ASC</option>
+                    <option value="4">MOD_IP_GALLERIA_TITLE_DESC</option>
+                    <option value="5">MOD_IP_GALLERIA_RANDOM</option>
+                    <option value="6">MOD_IP_GALLERIA_NEWEST_FIRST</option>
+                </field>                                
+                <field name="showCaption" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_CAPTIONS" description="MOD_IP_GALLERIA_CAPTIONS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="imageDuration" type="integer" default="5000" first="3000" last="10000" step="1000" label="MOD_IP_GALLERIA_IMGDURATION" description="MOD_IP_GALLERIA_IMGDURATION_DESC" />
+                <field name="transDuration" type="integer" default="2000" first="3000" last="10000" step="1000" label="MOD_IP_GALLERIA_TRANSDURATION" description="MOD_IP_GALLERIA_TRANSDURATION_DESC" />
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_HIDEMOD" description="MOD_IP_GALLERIA_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>                
+                
+                <!-- galleria -->
+                <field name="" type="header" default="MOD_IP_GALLERIA_SLIDESHOW_SETTINGS" label="" description="" />
+                <field name="galleria_theme" type="list" default="think" label="MOD_IP_GALLERIA_SLIDESHOW_THEME" description="MOD_IP_GALLERIA_SLIDESHOW_THEME_DESC">
+                    <option value="classic">MOD_IP_GALLERIA_CLASSIC</option>
+                    <option value="think">MOD_IP_GALLERIA_THINKERY</option>
+                </field>
+                <field name="galleria_thumbDisplay" type="list" class="inputbox" default="" label="MOD_IP_GALLERIA_THUMBDISPLAY" description="MOD_IP_GALLERIA_THUMBDISPLAY_DESC">
+                    <option value="">MOD_IP_GALLERIA_IMAGE</option>
+                    <option value="empty">MOD_IP_GALLERIA_EMPTY</option>
+                    <option value="numbers">MOD_IP_GALLERIA_NUMBERS</option>
+                </field>
+                <field name="galleria_showCount" type="radio" class="btn-group" default="0" label="MOD_IP_GALLERIA_SHOW_COUNT" description="MOD_IP_GALLERIA_SHOW_COUNT_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="galleria_transType" type="list" default="slide" label="MOD_IP_GALLERIA_TRANSTYPE" description="MOD_IP_GALLERIA_TRANSTYPE_DESC">
+                    <option value="fade">MOD_IP_GALLERIA_FADE</option>
+                    <option value="slide">MOD_IP_GALLERIA_SLIDE</option>
+                    <option value="fadeslide">MOD_IP_GALLERIA_FADESLIDE</option>
+                </field>
+                
+                <!-- original -->
+                <field name="" type="header" default="MOD_IP_GALLERIA_ORIGINAL_SLIDESHOW_SETTINGS" label="" description="" />                
+                <field name="orig_showThumbnails" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_SHOWTHUMBS" description="MOD_IP_GALLERIA_SHOWTHUMBS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="orig_showController" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_SHOWCONTROLLER" description="MOD_IP_GALLERIA_SHOWCONTROLLER_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="orig_loopShow" type="radio" class="btn-group" default="1" label="MOD_IP_GALLERIA_LOOPSHOW" description="MOD_IP_GALLERIA_LOOPSHOW_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>                
+                <field name="orig_transType" type="list" default="kenburns" label="MOD_IP_GALLERIA_TRANSTYPE" description="MOD_IP_GALLERIA_TRANSTYPE_DESC">
+                    <option value="none">MOD_IP_GALLERIA_NONE</option>
+                    <option value="flash">MOD_IP_GALLERIA_FLASH</option>
+                    <option value="kenburns">MOD_IP_GALLERIA_KEN_BURNS</option>
+                    <option value="push">MOD_IP_GALLERIA_PUSHING</option>
+                    <option value="fold">MOD_IP_GALLERIA_FOLD</option>
+                </field>                
+            </fieldset>
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="text"
+                    default=""
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                    name="cache"
+                    type="list"
+                    default="1"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                    name="cache_time"
+                    type="text"
+                    default="900"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="itemid">
+                    <option
+                        value="itemid"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="description" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+        <field name="title" type="text" class="inputbox" size="50" label="COM_IPROPERTY_TITLE" description="" />
+        <field name="alias" type="text" class="inputbox" size="50" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" />
+        <field name="mls_id" type="text" class="inputbox" size="20" label="COM_IPROPERTY_REF" description="COM_IPROPERTY_REF_TIP" />
+        <field name="listing_office" type="company" class="inputbox" size="1" label="COM_IPROPERTY_LISTING_OFFICE" description="" required="true" useauth="true" />
+        <field name="stype" type="stypes" class="inputbox" size="1" label="COM_IPROPERTY_SALE_TYPE" description="" required="true" />
+        <field name="price" type="text" class="inputbox" size="20" label="COM_IPROPERTY_PRICE" description="COM_IPROPERTY_PRICE_TIP" required="true" />
+        <field name="stype_freq" type="text" class="span2" label="" description="" />
+        <field name="price2" type="text" class="inputbox" size="20" label="COM_IPROPERTY_ORIGINAL_PRICE" description="COM_IPROPERTY_ORIGINAL_PRICE_TIP" />
+        <field name="call_for_price" type="radio" class="btn-group" label="COM_IPROPERTY_CALL_FOR_PRICE" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+		<field name="language" type="contentlanguage"
+			description="JFIELD_MODULE_LANGUAGE_DESC"
+			label="JFIELD_LANGUAGE_LABEL"
+		>
+			<option value="*">JALL</option>
+		</field>
+		<field name="property_type" type="text" class="inputbox" size="20" label="COM_IPROPERTY_TYPE"/>
+        <field name="available" type="calendar" label="COM_IPROPERTY_AVAILABLE" description="COM_IPROPERTY_AVAILABLE_DESC" class="inputbox" size="22" format="%Y-%m-%d" filter="user_utc" />
+        <field name="vtour" type="url" class="inputbox" size="50" label="COM_IPROPERTY_VTOUR" description="COM_IPROPERTY_VTOUR_TIP" />
+        <field name="categories" type="ipcategory" class="inputbox" size="10" style="width: 220px;" label="COM_IPROPERTY_CAT_AGENT" description="COM_IPROPERTY_CAT_AGENT_TIP" required="true" multiple="true" />
+        <field name="agents" type="agent" class="inputbox" size="10" style="width: 220px; margin-left: 10px;" label="" description="" required="true" multiple="true" useauth="true" />
+        <field name="short_description" type="textarea" class="inputbox span12" rows="7" label="COM_IPROPERTY_SUMMARY" description="COM_IPROPERTY_SUMMARY_TIP" filter="JComponentHelper::filterText" />
+        <field name="description_header" type="header" default="COM_IPROPERTY_DESCRIPTION" description="COM_IPROPERTY_WYSIWYG_TIP" tag="info" />
+        <field name="description" type="editor" class="inputbox span12" label="" description="" filter="JComponentHelper::filterText" buttons="true" hide="readmore,pagebreak"/>
+    </fieldset>
+    <fieldset name="location" addfieldpath="/administrator/components/com_iproperty/models/fields">
+        <field name="hide_address" type="radio" class="btn-group" label="COM_IPROPERTY_HIDE_ADDRESS" description="COM_IPROPERTY_HIDE_ADDRESS_TIP" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="show_map" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_MAP" description="COM_IPROPERTY_SHOW_MAP_TIP" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="street_num" type="text" class="inputbox" size="10" label="COM_IPROPERTY_STREET_NUM" description="" required="true" />
+        <field name="street" type="text" class="inputbox" size="50" label="COM_IPROPERTY_STREET" description="" required="true" />
+        <field name="street2" type="text" class="inputbox" size="50" label="COM_IPROPERTY_STREET2" description="" />
+        <field name="apt" type="text" class="inputbox" size="10" label="COM_IPROPERTY_APT" description="" />       
+        <field name="country" type="country" class="inputbox" size="1" label="COM_IPROPERTY_COUNTRY" description="" />
+        <field name="locstate" type="locstate" class="inputbox" size="1" label="COM_IPROPERTY_STATE" description="" />
+        <field name="province" type="text" class="inputbox" size="50" label="COM_IPROPERTY_PROVINCE" description="" />
+        <field name="county" type="text" class="inputbox" size="50" label="COM_IPROPERTY_COUNTY" description="" />
+        <field name="region" type="text" class="inputbox" size="50" label="COM_IPROPERTY_REGION" description="" />        
+        <field name="city" type="text" class="inputbox" size="50" label="COM_IPROPERTY_CITY" description="" required="true" />
+        <field name="postcode" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ZIP" description="" />
+        <field name="geocode_header" type="header" default="COM_IPROPERTY_DRAG_AND_DROP" description="COM_IPROPERTY_GEOCODER_DESC" tag="info" />
+        <field name="latitude" type="text" class="inputbox validate-coord" size="20" label="COM_IPROPERTY_LATITUDE" description="" />
+        <field name="longitude" type="text" class="inputbox validate-coord" size="20" label="COM_IPROPERTY_LONGITUDE" description="" />
+        <field name="kml" type="text" class="inputbox" size="20" label="COM_IPROPERTY_KML" description="COM_IPROPERTY_KML_DESC" />
+        <field name="kmlfile" type="file" class="inputbox" size="20" accept="application/vnd.google-earth.kml" label="COM_IPROPERTY_KML" description="COM_IPROPERTY_KML_DESC" />
+        <field name="map" type="map" description="COM_IPROPERTY_GMAPS_DISABLED" width="100%" height="300px;" border="#ccc" />
+    </fieldset>
+    <fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+        <field name="beds" type="beds" label="COM_IPROPERTY_BEDS" description="" />
+        <field name="baths" type="baths" label="COM_IPROPERTY_BATHS" description="" />
+        <field name="total_units" type="integer" default="1" label="COM_IPROPERTY_TOTALUNITS" description="COM_IPROPERTY_TOTALUNITS_DESC" first="1" last="10" step="1" />
+        <field name="sqft" type="text" class="inputbox" size="20" label="COM_IPROPERTY_SQFT" description="" />
+        <field name="lotsize" type="text" class="inputbox" size="20" label="COM_IPROPERTY_LOT_SIZE" description="" />
+        <field name="lot_acres" type="text" class="inputbox" size="20" label="COM_IPROPERTY_LOT_ACRES" description="" />
+        <field name="lot_type" type="text" class="inputbox" size="20" label="COM_IPROPERTY_LOT_TYPE" description="" />
+        <field name="heat" type="text" class="inputbox" size="20" label="COM_IPROPERTY_HEAT" description="" />
+        <field name="cool" type="text" class="inputbox" size="20" label="COM_IPROPERTY_COOL" description="" />
+        <field name="fuel" type="text" class="inputbox" size="20" label="COM_IPROPERTY_FUEL" description="" />
+        <field name="garage_type" type="text" class="inputbox" size="20" label="COM_IPROPERTY_GARAGE_TYPE" description="" />
+        <field name="garage_size" type="text" class="inputbox" size="20" label="COM_IPROPERTY_GARAGE_SIZE" description="" />
+        <field name="siding" type="text" class="inputbox" size="20" label="COM_IPROPERTY_SIDING" description="" />
+        <field name="roof" type="text" class="inputbox" size="20" label="COM_IPROPERTY_ROOF" description="" />
+        <field name="reception" type="text" class="inputbox" size="20" label="COM_IPROPERTY_RECEPTION" description="" />
+        <field name="tax" type="text" class="inputbox" size="20" label="COM_IPROPERTY_TAX" description="" />
+        <field name="income" type="text" class="inputbox" size="20" label="COM_IPROPERTY_INCOME" description="" />
+        <!-- column two -->
+        <field name="yearbuilt" type="text" class="inputbox" size="20" label="COM_IPROPERTY_YEAR_BUILT" description="" />
+        <field name="zoning" type="text" class="inputbox" size="20" label="COM_IPROPERTY_ZONING" description="" />
+        <field name="propview" type="text" class="inputbox" size="20" label="COM_IPROPERTY_PROPVIEW" description="" />
+        <field name="school_district" type="text" class="inputbox" size="20" label="COM_IPROPERTY_SCHOOL_DISTRICT" description="" />
+        <field name="style" type="text" class="inputbox" size="20" label="COM_IPROPERTY_STYLE" description="" />
+        <field name="frontage" type="radio" class="btn-group" label="COM_IPROPERTY_FRONTAGE" description="" default="0">
+            <option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="reo" type="radio" class="btn-group" label="COM_IPROPERTY_REO" description="" default="0">
+            <option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="hoa" type="radio" class="btn-group" label="COM_IPROPERTY_HOA" description="" default="0">
+            <option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+    </fieldset>
+    <fieldset name="amenities" addfieldpath="/administrator/components/com_iproperty/models/fields">       
+        <field name="general_amen_header" type="header" default="COM_IPROPERTY_GENERAL_AMENITIES" tag="success" />
+        <field name="general_amens" type="amencheckboxes" class="inputbox" label="" description="" category="0" />
+        <field name="interior_amen_header" type="header" default="COM_IPROPERTY_INTERIOR_AMENITIES" tag="info" />
+        <field name="interior_amens" type="amencheckboxes" class="inputbox" label="" description="" category="1" />
+        <field name="exterior_amen_header" type="header" default="COM_IPROPERTY_EXTERIOR_AMENITIES" tag="error" />
+        <field name="exterior_amens" type="amencheckboxes" class="inputbox" label="" description="" category="2" />
+		<field name="accessibility_amen_header" type="header" default="COM_IPROPERTY_ACCESSIBILITY_AMENITIES" tag="success" />
+        <field name="accessibility_amens" type="amencheckboxes" class="inputbox" label="" description="" category="3" />
+        <field name="green_amen_header" type="header" default="COM_IPROPERTY_GREEN_AMENITIES" tag="info" />
+        <field name="green_amens" type="amencheckboxes" class="inputbox" label="" description="" category="4" />
+        <field name="security_amen_header" type="header" default="COM_IPROPERTY_SECURITY_AMENITIES" tag="error" />
+        <field name="security_amens" type="amencheckboxes" class="inputbox" label="" description="" category="5" />
+		<field name="landscape_amen_header" type="header" default="COM_IPROPERTY_LANDSCAPE_AMENITIES" tag="success" />
+        <field name="landscape_amens" type="amencheckboxes" class="inputbox" label="" description="" category="6" />
+        <field name="community_amen_header" type="header" default="COM_IPROPERTY_COMMUNITY_AMENITIES" tag="info" />
+        <field name="community_amens" type="amencheckboxes" class="inputbox" label="" description="" category="7" />
+        <field name="appliance_amen_header" type="header" default="COM_IPROPERTY_APPLIANCE_AMENITIES" tag="error" />
+        <field name="appliance_amens" type="amencheckboxes" class="inputbox" label="" description="" category="8" />
+    </fieldset>
+    <fieldset name="gallery" addfieldpath="/administrator/components/com_iproperty/models/fields">
+        <field name="gallery" type="gallery" default="COM_IPROPERTY_IMAGES" />
+    </fieldset>
+    <fieldset name="video">
+        <field name="video" type="textarea" class="inputbox span12" rows="10" label="COM_IPROPERTY_VIDEO" description="COM_IPROPERTY_VIDEO_TIP" filter="JComponentHelper::filterText" />
+    </fieldset>
+    <fieldset name="agent_notes">   
+        <field name="agent_notes" type="textarea" class="inputbox span12" rows="5" label="COM_IPROPERTY_AGENT_NOTES" description="COM_IPROPERTY_AGENT_NOTES_TIP" filter="JComponentHelper::filterText" />
+        <field name="terms" type="textarea" class="inputbox span12" rows="5" label="COM_IPROPERTY_TERMS" description="" filter="JComponentHelper::filterText" />
+    </fieldset>
+    <fieldset name="right_panel">
+        <!-- details -->
+        <field name="hits" type="hits" class="inputbox input-small" label="COM_IPROPERTY_HITS" description="" />
+		<field name="created" type="calendar" label="JGLOBAL_FIELD_CREATED_LABEL"
+			description="JGLOBAL_FIELD_CREATED_DESC" class="inputbox input-medium" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		<field name="created_by" type="user"
+			label="JGLOBAL_FIELD_CREATED_BY_LABEL" description="JGLOBAL_FIELD_CREATED_BY_DESC" />
+		<field name="modified" type="calendar" class="readonly input-medium"
+			label="JGLOBAL_FIELD_MODIFIED_LABEL" description=""
+			size="22" readonly="true" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+		<field name="modified_by" type="user"
+            label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+            class="readonly"
+            readonly="true"
+            filter="unset"
+		/>
+        <field name="featured" type="radio" class="btn-group" label="JFEATURED" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <field name="approved" type="radio" class="btn-group" label="COM_IPROPERTY_APPROVED" description="" filter="intval" size="1" default="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>
+        <!-- publishing -->
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL"
+			description="JFIELD_ACCESS_DESC" class="inputbox input-medium" size="1" />
+        <field name="publish_up" type="calendar" label="JGLOBAL_FIELD_PUBLISH_UP_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_UP_DESC" class="inputbox input-medium" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+        <field name="publish_down" type="calendar" label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL"
+			description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC" class="inputbox input-medium" size="22"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />        
+        <field name="state" type="list" class="inputbox input-medium" label="JSTATUS"	description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+        </field>     
+        <!-- meta info -->
+        <field name="metakey" type="textarea"
+			label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+			class="inputbox" rows="3" cols="30" />
+		<field name="metadesc" type="textarea"
+			label="JFIELD_META_DESCRIPTION_LABEL" description="JFIELD_META_DESCRIPTION_DESC"
+			class="inputbox" rows="3" cols="30" />   
+        <!--<field name="tags" type="tag" label="JTAG" description="JTAG_DESC"
+            class="inputbox span12 small" multiple="true" />-->
+    </fieldset>
+</form>

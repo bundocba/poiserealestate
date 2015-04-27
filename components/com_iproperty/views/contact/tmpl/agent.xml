@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_CONTACT_AGENT">
+		<message>
+			<![CDATA[COM_IPROPERTY_CONTACT_AGENT_DESC]]>
+		</message>
+	</layout>
+    <fields name="request">
+        <fieldset name="request" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="id" type="agent" default="0" label="COM_IPROPERTY_AGENT" description="COM_IPROPERTY_SELECT_AGENT" useauth="true" />
+        </fieldset>
+    </fields>
+    <fields name="params">
+        <fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="show_ip_title" type="list" label="COM_IPROPERTY_SHOW_IP_TITLE" default="1" description="COM_IPROPERTY_SHOW_IP_TITLE_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

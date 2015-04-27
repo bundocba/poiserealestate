@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="stf" addrulepath="components/com_iproperty/models/rules">
+		<field name="sender_name"
+			type="text"
+			id="ip_sender_name_stf"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_NAME"
+			filter="string"
+			required="true"
+		/>
+		<field name="sender_email"
+			type="email"
+			id="ip_sender_email_stf"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_EMAIL"
+			filter="string"
+			validate="ipropertyemail"
+			required="true"
+		/>
+        <field name="recipient_email"
+			type="text"
+			id="ip_recipient_email_stf"
+			size="30"
+			description="COM_IPROPERTY_ENTER_MULTIPLE_EMAILS"
+			label="COM_IPROPERTY_FRIENDS_EMAILS"
+			filter="string"
+			required="true"
+		/>
+		<field name="comments"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="ip_special_requests_stf"
+			description=""
+			label="COM_IPROPERTY_SPECIAL_REQUESTS"
+			filter="htmlsafe"
+            validate="ipropertyemailmessage"
+            required="true"
+		/>
+		<field name="copy_me"
+			type="checkbox"
+			id="ip_copy_me_stf"
+			description=""
+			label="COM_IPROPERTY_COPY_ME_EMAIL"
+			default="0"
+		/>
+        <field
+			name="captcha"
+			type="captcha"
+			label="COM_IPROPERTY_CAPTCHA_LABEL"
+			description="COM_IPROPERTY_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="stfform"
+		/>
+	</fieldset>
+</form>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+    <name>IP Quicksearch</name>
+    <author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+    <description>Display an Intellectual Property quick search form in module position.</description>
+    <files>
+		<filename module="mod_ip_quicksearch">mod_ip_quicksearch.php</filename>
+		<filename>index.html</filename>
+        <folder>js/</folder>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_quicksearch.ini</language>
+    </languages>
+
+    <config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="qs_ptype" type="ipcategory" default="" label="MOD_IP_QUICKSEARCH_CATPRESELECT" description="MOD_IP_QUICKSEARCH_CATPRESELECT_DESC" />
+                <field name="show_advsearch" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_ADVANCED" description="MOD_IP_QUICKSEARCH_SHOW_ADVANCED_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="" type="header" default="MOD_IP_QUICKSEARCH_OPTIONS" label="" description="" />
+                <field name="show_keyword" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_KEYWORD" description="MOD_IP_QUICKSEARCH_SHOW_KEYWORD_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_cat" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_CAT" description="MOD_IP_QUICKSEARCH_SHOW_CAT_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_stype" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_STYPE" description="MOD_IP_QUICKSEARCH_SHOW_STYPE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_beds" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_BEDS" description="MOD_IP_QUICKSEARCH_SHOW_BEDS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_baths" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_BATHS" description="MOD_IP_QUICKSEARCH_SHOW_BATHS">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_sqft" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_SQFT" description="MOD_IP_QUICKSEARCH_SHOW_SQFT">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="sqft_units" type="list" default="1" label="MOD_IP_QUICKSEARCH_SQFT_UNITS" description="MOD_IP_QUICKSEARCH_SQFT_UNITS">
+                    <option value="1">Ft</option>
+                    <option value="0">M</option>
+                </field>
+                <field name="show_price" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_PRICE" description="MOD_IP_QUICKSEARCH_SHOW_PRICE">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="price_dropdowns" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_PRICE_DROPDOWNS" description="MOD_IP_QUICKSEARCH_SHOW_PRICE_DROPDOWNS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="price_interval" type="list" default="0" label="MOD_IP_QUICKSEARCH_PRICE_INTERVAL" description="MOD_IP_QUICKSEARCH_PRICE_INTERVAL_DESC">
+                    <option value="0">JNO</option>
+                    <option value="10000">10000</option>
+                    <option value="20000">20000</option>
+                    <option value="25000">25000</option>
+                    <option value="50000">50000</option>
+                    <option value="75000">75000</option>
+                    <option value="100000">100000</option>
+                    <option value="125000">125000</option>
+                    <option value="150000">150000</option>
+                    <option value="200000">200000</option>
+                    <option value="250000">250000</option>
+                </field>
+                
+                <field name="" type="header" default="MOD_IP_QUICKSEARCH_LOCATION" label="" description="" />                
+                <field name="show_country" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_COUNTRY" description="MOD_IP_QUICKSEARCH_SHOW_COUNTRY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_state" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_STATE" description="MOD_IP_QUICKSEARCH_SHOW_STATE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_province" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_PROVINCE" description="MOD_IP_QUICKSEARCH_SHOW_PROVINCE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_county" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_COUNTY" description="MOD_IP_QUICKSEARCH_SHOW_COUNTY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_region" type="radio" class="btn-group" default="0" label="MOD_IP_QUICKSEARCH_SHOW_REGION" description="MOD_IP_QUICKSEARCH_SHOW_REGION_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="show_city" type="radio" class="btn-group" default="1" label="MOD_IP_QUICKSEARCH_SHOW_CITY" description="MOD_IP_QUICKSEARCH_SHOW_CITY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>                
+                <field name="" type="header" default="MOD_IP_QUICKSEARCH_ROUTING" label="" description="" />
+                <field name="form_method" type="radio" class="btn-group" default="post" label="MOD_IP_QUICKSEARCH_METHOD" description="MOD_IP_QUICKSEARCH_METHOD_DESC">
+                    <option value="post">MOD_IP_QUICKSEARCH_POST</option>
+                    <option value="get">MOD_IP_QUICKSEARCH_GET</option>
+                </field>
+                <field name="form_itemid" type="text" default="" label="MOD_IP_QUICKSEARCH_ITEMID" description="MOD_IP_QUICKSEARCH_ITEMID_DESC" />
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+                    default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

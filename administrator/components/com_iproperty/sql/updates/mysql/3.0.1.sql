@@ -1,0 +1,1 @@
+ALTER IGNORE TABLE `#__iproperty_settings` ADD `feed_show` tinyint(1) unsigned NOT NULL DEFAULT '1' AFTER `adv_nolimit`;

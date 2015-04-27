@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension version="2.5" type="plugin" group="quickicon" method="upgrade">
+	<name>Quick Icon - IProperty</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Quick icons to display links to IProperty from Joomla admin control panel.</description>
+	<files>
+		<filename plugin="iprop">iprop.php</filename>
+		<filename>index.html</filename>
+	</files>
+    <languages>
+       <language tag="en-GB">en-GB.plg_quickicon_iprop.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="context"
+					   type="text"
+					   default="mod_quickicon"
+					   description="PLG_QUICKICON_IPROPERTY_GROUP_DESC"
+					   label="PLG_QUICKICON_IPROPERTY_GROUP_LABEL"
+						/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

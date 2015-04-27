@@ -1,0 +1,93 @@
+/**
+ * @version 3.3.1 2014-06-06
+ * @package Joomla
+ * @subpackage Intellectual Property
+ * @copyright (C) 2009 - 2014 the Thinkery LLC. All rights reserved.
+ * @license GNU/GPL see LICENSE.php
+ */
+
+/* uncomment the following line to set fixed height in property details view image tab
+.ip-mapleft .tab-pane{max-height: 355px; overflow: hidden;} 
+*/
+ 
+/* ip generic css */
+.ip-row0, .ip-row1{padding: 7px;}
+.ip-overview-active{border: solid 1px #35A2D9; box-shadow: 0px 0px 9px #888888;}
+.ip-openhouse-header{padding: 10px 0px;}
+.ip-pointer{cursor: pointer;}
+ 
+ /* property details view */
+ #propimages{position: relative;} /* required for proper banner alignment */
+.ip-proptab-image{position: relative;} /* this allows the banners to display correctly */
+.ip-carousel-control{top: 140px !important;} /* bootstrap gallery carousel controls - set px position to avoid jumping */
+.ip-mapright dl{margin-bottom: 10px;}
+.ip-propdetails-divider{height: 15px;}
+ 
+ /* property details sidebar */
+.ip-sidecol.ip-mainaddress, .ip-sidecol.ip-categories{margin-top: 10px !important;}
+.ip-slashprice{text-decoration: line-through;}
+.ip-newprice{font-size: 115%;}
+.ip-quicksearch-optholder{padding-bottom: 10px;}
+.ip-featured-icon{margin-right: 15px;}
+.ip-cat-icon-divider{line-height: 30px;}
+.ip-cat-home-img{float: right;}
+.ip-property-thumb-holder, .ip-image-tab, .ip-mod-thumb{position: relative;}
+
+/* banners */
+.ip-bannertopleft{z-index: 1000 !important; position: absolute; top: 0px; left: 0px;}
+.ip-bannerbotleft{z-index: 999 !important; position: absolute; bottom: 0px; left: 0px;}
+.ip-bannertopright{z-index: 998 !important; position: absolute; top: 0px; right: 0px;}
+.ip-bannerbotright{z-index: 997 !important; position: absolute; bottom: 0px; right: 0px;}
+
+/* css banners */
+.ip-bannercsstop{position: absolute; top: 0px; padding: 3px;}
+.ip-bannercssbot{position: absolute; bottom: 0px; padding: 3px;}
+.ip-banner-new{background: #20a800; font-weight: bold; color: #fff;}
+.ip-banner-sold{background: #cc0000; font-weight: bold; color: #fff;}
+.ip-banner-pending{background: #e8ab07; font-weight: bold; color: #fff;}
+.ip-banner-updated{background: #076db3; font-weight: bold; color: #fff;}
+
+.ip-state-highlight{background: #D9EDF7; border: 3px dashed #74b4d4;}
+.ip-openhouse-info{padding: 10px; border: dotted 1px; margin-right: 20px;}
+.ip-quicksearch-form .ip-quicksearch-optholder input, .ip-quicksearch-form .ip-quicksearch-optholder select{margin-bottom: 5px !important;}
+.ip-quicksearch-form .ip-quicksearch-sortholder select{margin-right: 5px !important;}
+
+/* default img widths */
+.ip-mod-thumb .thumbnail, .ip-overview-thumb{width: 95%; position: relative;}
+
+/* additional plugin styles */
+#ipdirectionsplug{overflow: auto;}
+#ippano img{border: none !important; max-width: none !important;} /* fixes firefox bugginess */
+#ws-walkscore-tile{position: relative; text-align: left;}
+#ws-walkscore-tile *{float: none;}
+#ws-footer a,
+#ws-footer a:link{font: 11px Verdana,Arial,Helvetica,sans-serif; margin-right: 6px; white-space: nowrap; padding: 0; color: #000; font-weight: bold; text-decoration: none;}
+#ws-footer a:hover{color: #777; text-decoration: none;}
+#ws-footer a:active{color: #b14900;}
+.ip-before-property, .ip-after-property{position: relative;} /* plugin wrappers are relative in order to position some plugin buttons */
+
+/* form css */
+.ip-vid-tab .active a,.ip-vid-tab .active a:hover {background-color: #377391; color: #fff;}
+
+/* print css */
+.ip-print-table td{vertical-align: top; padding: 5px;}
+.ip-print-leftcol{width: 70%;}
+.ip-print-rightcol{width: 30%;}
+
+/* 3.2.1 additions */
+.ip-map-div img{max-width: inherit;} /*fix for zoom controls collapsing*/
+
+/* mobile specific css */
+@media (max-width: 480px) {
+    .nav-tabs > li > a{background: #D9EDF7 !important; border: solid 1px #3A87AD; padding: 3px !important; margin: 5px 2px !important; border-radius: 3px !important;}
+    .ip-mapleft .tab-pane, #ip-map-canvas{height: auto; max-width: 100% !important;}
+    #ip-image-tab, #ip-image-tab img{max-width: 100% !important;}
+}
+
+@media print{
+    .ip-print-icon, .ip-agent-contact-btn, .ip-vtour{display: none !important;}
+    a:link:after, a:visited:after {  
+      display: none;
+      content: "";    
+    }
+}

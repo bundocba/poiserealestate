@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_GOOGLE_EARTH">
+		<message>
+			<![CDATA[COM_IPROPERTY_GOOGLE_EARTH_DESC]]>
+		</message>
+	</layout>
+    <fields name="request" hide="true">
+        <fieldset name="request">
+            <field name="format" type="text" default="xml" readonly="true" class="readonly" />
+        </fieldset>
+    </fields>
+</metadata>

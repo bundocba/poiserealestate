@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Agent QR vCard / meCard</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Intellectual Property Agent QR vCard / meCard - Agent position</description>
+	<files>
+		<filename plugin="agentqr">agentqr.php</filename>
+        <filename>index.html</filename>
+	</files>
+	<languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_agentqr.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="format" type="list" default="1" label="PLG_IP_AGENTQR_FORMAT" description="PLG_IP_AGENTQR_FORMAT_DESC">
+                  <option value="0">vCard</option>
+                  <option value="1">meCard</option>
+                </field>
+                <field name="show_property_agent" type="radio" class="btn-group" default="1" label="PLG_IP_AGENTQR_SHOWPROPERTY" description="PLG_IP_AGENTQR_SHOWPROPERTY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="size_property" type="integer" default="150" label="PLG_IP_AGENTQR_SIZE_PROPERTY" description="PLG_IP_AGENTQR_SIZE_DESC" first="100" last="600" step="25" />
+                <field name="show_list_agent" type="radio" class="btn-group" default="1" label="PLG_IP_AGENTQR_SHOWLIST" description="PLG_IP_AGENTQR_SHOWLIST_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="size_list" type="integer" default="150" label="PLG_IP_AGENTQR_SIZE_LIST" description="PLG_IP_AGENTQR_SIZE_DESC" first="100" last="600" step="25" />
+                <field
+					name="qr_note"
+					type="textarea"
+					filter="safehtml"
+					cols="30"
+					rows="5"
+					label="PLG_IP_AGENTQR_NOTE"
+					description="PLG_IP_AGENTQR_NOTE_DESC" />
+                <field name="qr_phone_prefix" type="radio" class="btn-group" default="1" label="PLG_IP_AGENTQR_PHONEPREFIX" description="PLG_IP_AGENTQR_PHONEPREFIX_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+             </fieldset>
+         </fields>
+     </config>
+</extension>

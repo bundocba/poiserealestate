@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>IP Recently Viewed</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Most recently viewed properties as module. Brief overview of Iproperty listings and link to property page.</description>
+	<files>
+		<filename module="mod_ip_recentviewed">mod_ip_recentviewed.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_recentviewed.ini</language>
+    </languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="" type="header" default="MOD_IP_RECENT_VIEWED_DISPLAY" label="" description="" />
+                <field name="include_ipcss" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_INCLUDE_IPCSS" description="MOD_IP_RECENT_VIEWED_INCLUDE_IPCSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>                
+                <field name="" type="header" default="MOD_IP_RECENT_VIEWED_LAYOUT" label="" description="" />
+                <field name="iplayout" type="list" default="columns" label="MOD_IP_RECENT_VIEWED_LAYOUT" description="MOD_IP_RECENT_VIEWED_LAYOUT_DESC">
+                    <option value="columns">MOD_IP_RECENT_VIEWED_COLUMNS</option>
+                    <option value="rows">MOD_IP_RECENT_VIEWED_ROWS</option>
+                </field>
+                <field name="columns" type="list" default="3" label="MOD_IP_RECENT_VIEWED_COLUMNS" description="MOD_IP_RECENT_VIEWED_COLUMNS_DESC">
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                </field>
+                <field name="preview_count" type="text" default="200" label="MOD_IP_RECENT_VIEWED_CHARACTERS" description="MOD_IP_RECENT_VIEWED_CHARACTERS_DESC" />
+                <field name="" type="header" default="MOD_IP_RECENT_VIEWED_OPTIONS" label="" description="" />
+                <field name="count" type="text" default="5" label="MOD_IP_RECENT_VIEWED_COUNT" description="MOD_IP_RECENT_VIEWED_COUNT_DESC" />
+                <field name="random" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_RANDOM" description="MOD_IP_RECENT_VIEWED_RANDOM_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_desc" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_SHOWDESC" description="MOD_IP_RECENT_VIEWED_SHOWDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_banners" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_SHOWBANNERS" description="MOD_IP_RECENT_VIEWED_SHOWBANNERS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_readmore" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_SHOW_READ_MORE">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="usethumb" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_USETHUMB" description="MOD_IP_RECENT_VIEWED_USETHUMB_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hidenopic" type="radio" class="btn-group" default="0" label="MOD_IP_RECENT_VIEWED_HIDENOPIC" description="MOD_IP_RECENT_VIEWED_HIDENOPIC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_RECENT_VIEWED_HIDEMOD" description="MOD_IP_RECENT_VIEWED_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+                    default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

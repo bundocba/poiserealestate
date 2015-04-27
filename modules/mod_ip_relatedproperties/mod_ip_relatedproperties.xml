@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>IP Related</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Related properties module. Selects closest related properties according to currently viewed property category and additional module parameters. If no property is being viewed, you can choose to hide or show no results.</description>
+	<files>
+		<filename module="mod_ip_relatedproperties">mod_ip_relatedproperties.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_relatedproperties.ini</language>
+    </languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="" type="header" default="MOD_IP_RELATED_DISPLAY" label="" description="" />
+                <field name="ul_class" type="text" default="" label="MOD_IP_RELATED_ULCLASS" description="MOD_IP_RELATED_ULCLASS_DESC" />
+                <field name="count" type="text" default="5" label="MOD_IP_RELATED_LIMIT" description="MOD_IP_RELATED_LIMIT_DESC" />
+                <field name="" type="header" default="MOD_IP_RELATED_OPTIONS" label="" description="" />
+                <field name="ordering" type="list" default="1" label="MOD_IP_RELATED_ORDER" description="MOD_IP_RELATED_ORDER_DESC">
+                    <option value="1">MOD_IP_RELATED_PRICE_ASC</option>
+                    <option value="2">MOD_IP_RELATED_PRICE_DESC</option>
+                    <option value="3">MOD_IP_RELATED_TITLE_ASC</option>
+                    <option value="4">MOD_IP_RELATED_TITLE_DESC</option>
+                    <option value="5">MOD_IP_RELATED_RANDOM</option>
+                </field>
+                <field name="search_cat" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_CATEGORY" description="MOD_IP_RELATED_CATEGORY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_city" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_CITIES" description="MOD_IP_RELATED_CITIES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_state" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_STATES" description="MOD_IP_RELATED_STATES_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_province" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_PROVINCE" description="MOD_IP_RELATED_PROVINCE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_county" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_COUNTY" description="MOD_IP_RELATED_COUNTY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_region" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_REGION" description="MOD_IP_RELATED_REGION_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="search_country" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_COUNTRY" description="MOD_IP_RELATED_COUNTRY_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_RELATED_HIDEMOD" description="MOD_IP_RELATED_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+                    default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

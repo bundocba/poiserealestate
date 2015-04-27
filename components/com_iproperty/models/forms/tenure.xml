@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+        <field name="title" type="text" class="inputbox" label="COM_IPROPERTY_TITLE" description="" required="true" />
+        <field name="alias" type="text" class="inputbox" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" />
+        <field name="description" type="description" class="inputbox validate-description" label="COM_IPROPERTY_DESCRIPTION" description="" />
+       
+        <!-- publishing -->
+        <field name="state" type="list" class="inputbox" label="JSTATUS"	description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+        </field>        
+        <field name="featured" type="list" class="inputbox" label="JFEATURED" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+
+        <!-- image -->
+       
+    </fieldset>
+    <fields name="params">
+        <fieldset name="admin_params" label="COM_IPROPERTY_COMPANY_PARAMS">
+            <field name="maxlistings" type="text" default="" label="COM_IPROPERTY_MAXIMUM_LISTINGS" description="COM_IPROPERTY_MAXIMUM_LISTINGS_DESC" />
+            <field name="maxflistings" type="text" default="" label="COM_IPROPERTY_MAXIMUM_FEATURED_LISTINGS" description="COM_IPROPERTY_MAXIMUM_FEATURED_LISTINGS_DESC" />
+            <field name="maxagents" type="text" default="" label="COM_IPROPERTY_MAXIMUM_AGENTS" description="COM_IPROPERTY_MAXIMUM_AGENTS_DESC" />
+            <field name="maxfagents" type="text" default="" label="COM_IPROPERTY_MAXIMUM_FEATURED_AGENTS" description="COM_IPROPERTY_MAXIMUM_FEATURED_AGENTS_DESC" />
+        </fieldset>
+    </fields>
+</form>

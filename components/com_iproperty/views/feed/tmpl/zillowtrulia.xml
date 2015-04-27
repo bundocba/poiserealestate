@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_ZILLOW_TRULIA">
+		<message>
+			<![CDATA[COM_IPROPERTY_ZILLOW_TRULIA_DESC]]>
+		</message>
+	</layout>
+    <fields name="request" hide="true">
+        <fieldset name="request">
+            <field name="format" type="hidden" default="xml" />
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>IP Map Module</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Show a Google or Bing Map in module position, with property markers.</description>
+	<files>
+		<filename module="mod_ip_mapmodule">mod_ip_mapmodule.php</filename>
+		<filename>index.html</filename>
+		<filename>bing.js</filename>
+		<filename>google.js</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_mapmodule.ini</language>
+    </languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="cat_id" type="ipcategory" default="0" label="MOD_IP_MAPMODULE_CATID" description="MOD_IP_MAPMODULE_CATID_DESC" />
+                <field name="cat_subcats" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_SUBCATS" description="MOD_IP_MAPMODULE_SUBCATS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="prop_stype" type="stypes" default="0" label="MOD_IP_MAPMODULE_STYPE" description="MOD_IP_MAPMODULE_STYPE_DESC" />
+                <field name="" type="header" default="MOD_IP_MAPMODULE_LAYOUT" label="" description="" />
+                <field name="include_ipcss" type="radio" class="btn-group" default="1" label="MOD_IP_MAPMODULE_INCLUDE_IPCSS" description="MOD_IP_MAPMODULE_INCLUDE_IPCSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="maptype" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_TYPE" description="MOD_IP_MAPMODULE_TYPE_DESC">
+                    <option value="0">MOD_IP_MAPMODULE_GOOGLE</option>
+                    <option value="1">MOD_IP_MAPMODULE_BING</option>
+                </field>
+				<field name="mapstyle" type="list" default="ROADMAP" label="MOD_IP_MAPMODULE_STYLE" description="MOD_IP_MAPMODULE_STYLE_DESC">
+                    <option value="SATELLITE">MOD_IP_MAPMODULE_SATELLITE</option>
+                    <option value="TERRAIN">MOD_IP_MAPMODULE_TERRAIN</option>
+					<option value="ROADMAP">MOD_IP_MAPMODULE_ROADMAP</option>
+					<option value="HYBRID">MOD_IP_MAPMODULE_HYBRID</option>
+                </field>
+                <field name="agent" type="agent" default="0" label="MOD_IP_MAPMODULE_AGENT" description="MOD_IP_MAPMODULE_AGENT_DESC" />
+                <field name="company" type="company" default="0" label="MOD_IP_MAPMODULE_COMPANY" description="MOD_IP_MAPMODULE_COMPANY_DESC" />
+                <field name="city" type="city" default="0" label="MOD_IP_MAPMODULE_CITY" description="MOD_IP_MAPMODULE_CITY_DESC" />
+                <field name="locstate" type="locstate" default="0" label="MOD_IP_MAPMODULE_STATE" description="MOD_IP_MAPMODULE_LOCSTATE_DESC" />
+                <field name="country" type="country" default="0" label="MOD_IP_MAPMODULE_COUNTRY" description="MOD_IP_MAPMODULE_COUNTRY_DESC" />
+                <field name="reo" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_REO" description="MOD_IP_MAPMODULE_REO_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hoa" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_HOA" description="MOD_IP_MAPMODULE_HOA_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="frontage" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_FRONTAGE" description="MOD_IP_MAPMODULE_FRONTAGE_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="" type="header" default="MOD_IP_MAPMODULE_OPTIONS" label="" description="" />
+				<field name="height" type="integer" default="250" first="100" last="400" step="25" label="MOD_IP_MAPMODULE_HEIGHT" description="MOD_IP_MAPMODULE_HEIGHT_DESC" />
+                <field name="count" type="integer" default="20" first="10" last="100" step="10" label="MOD_IP_MAPMODULE_COUNT" description="MOD_IP_MAPMODULE_COUNT_DESC" />
+                <field name="hidenopic" type="radio" class="btn-group" default="0" label="MOD_IP_MAPMODULE_HIDENOPIC" description="MOD_IP_MAPMODULE_HIDENOPIC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_MAPMODULE_HIDEMOD" description="MOD_IP_MAPMODULE_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field name="cache" type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+				>
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field name="cache_time" type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

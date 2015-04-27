@@ -1,0 +1,2 @@
+ALTER IGNORE TABLE `#__iproperty_settings` ADD `show_requestshowing` tinyint(1) unsigned NOT NULL DEFAULT '1' AFTER `show_sendtofriend`;
+ALTER IGNORE TABLE `#__iproperty_settings` ADD `ip_router` tinyint(1) unsigned NOT NULL DEFAULT '0' AFTER `bootstrap_css`;

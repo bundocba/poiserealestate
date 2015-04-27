@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Google Plus One</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Intellectual Property Google Plus One Plugin (After Property)</description>
+	<files>
+        <filename plugin="plusone">plusone.php</filename>
+        <filename>index.html</filename>
+	</files>
+	<languages>
+        <language tag="en-GB">en-GB.plg_iproperty_plusone.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="position" type="list" default="bottom" label="PLG_IP_PLUSONE_POSITION_LABEL" description="PLG_IP_PLUSONE_POSITION_DESC">
+                    <option value="top">PLG_IP_PLUSONE_TOP</option>
+                    <option value="bottom">PLG_IP_PLUSONE_BOTTOM</option>
+                </field>
+                <field name="topmargin" type="text" default="10" label="PLG_IP_PLUSONE_TOPMARGIN" description="PLG_IP_PLUSONE_TOPMARGIN_DESC" />
+                <field name="rightmargin" type="text" default="10" label="PLG_IP_PLUSONE_RIGHTMARGIN" description="PLG_IP_PLUSONE_RIGHTMARGIN_DESC" />
+                <field name="size" type="list" default="" label="PLG_IP_PLUSONE_SIZE_LABEL" description="PLG_IP_PLUSONE_SIZE_DESC">
+                    <option value="small">PLG_IP_PLUSONE_SMALL</option>
+                    <option value="medium">PLG_IP_PLUSONE_MEDIUM</option>
+                    <option value="">PLG_IP_PLUSONE_STANDARD</option>
+                    <option value="tall">PLG_IP_PLUSONE_TALL</option>
+                </field>
+            </fieldset>
+        </fields>
+     </config>
+</extension>

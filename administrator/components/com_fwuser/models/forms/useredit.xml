@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+<field
+	default=""
+	name="id"
+	label="Id"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field
+	default=""
+	name="date"
+	label="Date"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field
+	default=""
+	name="user_id"
+	label="User Id"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field
+	default=""
+	name="level"
+	label="Level"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field
+	default=""
+	name="key"
+	label="Key"
+	type="hidden"
+	class="inputbox"
+	size="11"
+	required="false"
+/>
+<field name="title" type="list" label="FI_TITLE"
+	class="inputbox"
+	size="1" default="0"
+>
+	<option value=""></option>
+	<option value="Mr">Mr</option>
+	<option value="Mrs">Mrs</option>
+	<option value="Ms">Ms</option>
+	<option value="Company">Company</option>
+</field>
+<field
+	required="true"
+	default=""
+	name="firstname"
+	label="FI_FIRSTNAME"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="midlename"
+	label="FI_MIDLENAME"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="lastname"
+	label="FI_LASTNAME"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="email"
+	label="FI_EMAIL"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="username"
+	label="FI_USERNAME"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="password"
+	label="FI_PASSWORD"
+	type="password"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="re_password"
+	label="FI_REPASSWORD"
+	type="password"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="country"
+	label="FI_COUNTRY"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="state"
+	label="FI_STATE"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="city"
+	label="FI_CITY"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="address"
+	label="FI_ADDRESS"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="address1"
+	label="FI_ADDRESS1"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="zip"
+	label="FI_ZIP"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="true"
+	default=""
+	name="phone"
+	label="FI_PHONE"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="mobilephone"
+	label="FI_MOBILEPHONE"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="fax"
+	label="FI_FAX"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="company"
+	label="FI_COMPANY"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	required="false"
+	default=""
+	name="job"
+	label="FI_JOB"
+	type="text"
+	class="inputbox"
+	size="100"
+/>
+<field
+	default=""
+	name="birthday"
+	label="FI_BIRTHDAY"
+	type="calendar"
+	format="%Y-%m-%d"
+	class="inputbox"
+	size="100"
+/>
+<field name="gender" type="list" label="FI_GENDER"
+	class="inputbox"
+	filter="intval" size="1" default="1"
+>
+	<option value="1">FI_MALE</option>
+	<option value="0">FI_FEMALE</option>
+</field>
+<field name="published" type="list" label="FI_STATUS"
+	class="inputbox"
+	filter="intval" size="1" default="1"
+>
+	<option value="1">FI_NOTBLOCK</option>
+	<option value="0">FI_BLOCK</option>
+</field>
+
+<field
+	required="false"
+	default=""
+	name="avatar"
+	label="Avatar"
+	type="file"
+	class="inputbox"
+/>
+	</fieldset>
+</form>

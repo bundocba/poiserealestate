@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+    <name>COM_IPROPERTY</name>
+    <creationDate>June 2014</creationDate>
+    <author>The Thinkery</author>
+    <authorEmail>info@thethinkery.net</authorEmail>
+    <authorUrl>http://www.thethinkery.net</authorUrl>
+    <copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+    <license>GNU/GPL</license>
+    <version>3.3.1</version>
+    <description></description>
+    <scriptfile>installfile.php</scriptfile>
+
+    <!-- Site stuff here -->
+    <files folder="site">
+        <filename>controller.php</filename>        
+        <filename>index.html</filename>
+        <filename>iproperty.php</filename>
+        <filename>router.php</filename>
+        <folder>assets</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>sef_ext</folder>
+        <folder>views</folder>
+    </files>
+    
+    <media folder="media/iptmp" destination="iptmp">
+        <filename>index.html</filename>
+        <filename>iprop_export_sample.csv</filename>
+        <filename>iprop_export_sample.xml</filename>
+        <filename>nopic.png</filename>
+    </media>
+
+    <languages>
+        <language tag="en-GB">languages/site/en-GB/en-GB.com_iproperty.ini</language>
+    </languages>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.iproperty.sql</file>
+        </sql>
+    </install>
+
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.iproperty.sql</file>
+        </sql>
+    </uninstall>
+
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+    
+    <!-- Admin stuff here -->
+    <administration>
+        <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="iproperty" link="option=com_iproperty">COM_IPROPERTY_INTELLECTUAL_PROPERTY</menu>
+		<submenu>
+			<menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="categories">COM_IPROPERTY_CATEGORIES</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="properties">COM_IPROPERTY_PROPERTIES</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="companies">COM_IPROPERTY_COMPANIES</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="agents">COM_IPROPERTY_AGENTS</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="amenities">COM_IPROPERTY_AMENITIES</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="openhouses">COM_IPROPERTY_OPEN_HOUSES</menu>
+            <menu img="components/com_iproperty/assets/images/icon-16-ip_properties.png" view="settings">COM_IPROPERTY_SETTINGS</menu>
+		</submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>            
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>iproperty.php</filename>
+            <folder>assets</folder>
+            <folder>classes</folder>
+            <folder>controllers</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>            
+        </files> 
+        <languages>
+            <language tag="en-GB">languages/admin/en-GB/en-GB.com_iproperty.ini</language>
+            <language tag="en-GB">languages/admin/en-GB/en-GB.com_iproperty.sys.ini</language>
+        </languages>
+    </administration>
+    
+    <!-- Modules here -->
+    <modules>
+        <module folder="modules" module="mod_ip_catmenu" new="3.3" />
+        <module folder="modules" module="mod_ip_agenttoolbar" />
+        <module folder="modules" module="mod_ip_citylinks" />
+        <module folder="modules" module="mod_ip_featuredagents" />
+        <module folder="modules" module="mod_ip_featuredcompanies" />
+        <module folder="modules" module="mod_ip_featuredproperties" />
+        <module folder="modules" module="mod_ip_mapmodule" />
+        <module folder="modules" module="mod_ip_mlssearch" />
+        <module folder="modules" module="mod_ip_openhouse" />
+        <module folder="modules" module="mod_ip_popular_admin" />
+        <module folder="modules" module="mod_ip_popularproperties" />
+        <module folder="modules" module="mod_ip_quicksearch" />
+        <module folder="modules" module="mod_ip_randomagent" />
+        <module folder="modules" module="mod_ip_randomproperties" />
+        <module folder="modules" module="mod_ip_recentproperties" />
+        <module folder="modules" module="mod_ip_recentsold" />
+        <module folder="modules" module="mod_ip_recentviewed" />
+        <module folder="modules" module="mod_ip_relatedproperties" />
+        <module folder="modules" module="mod_ip_slideshow_galleria" />
+        <module folder="modules" module="mod_ip_tagcloud" />
+        <module folder="modules" module="mod_ip_zillowmrates" />
+    </modules>    
+    
+    <!-- Plugins here -->
+    <plugins>
+        <plugin folder="plugins/3rd_party" plugin="plg_ip_searchbot" group="search" />
+        <plugin folder="plugins/3rd_party" plugin="plg_ip_smartsearch" group="finder" new="3.3 [beta]" />
+        <!--<plugin folder="plugins/3rd_party" plugin="plg_ip_xmap" group="xmap" />-->
+        <plugin folder="plugins/ip_native" plugin="plg_ip_addthis" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_admintools" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_adwordconvert" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_agentgroup" group="system" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_agentqr" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_autoalias" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_currency" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_directions" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_dpe" group="content" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_education" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_favoritetools" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_fbcomment" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_fblike" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_fblisting" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_findmyschooluk" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_gallery" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_googleplusone" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_gplaces" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_ipropertylink" group="editors-xtd" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_jcomments" group="iproperty" />
+        <!--<plugin folder="plugins/ip_native" plugin="plg_ip_jomcomment" group="iproperty" />-->
+        <plugin folder="plugins/ip_native" plugin="plg_ip_pinterest" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_privatemessage" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_quickicons" group="quickicon" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_streetview" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_tweetlisting" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_tweetthis" group="iproperty" />
+        <plugin folder="plugins/ip_native" plugin="plg_ip_walkscore" group="iproperty" />      
+    </plugins>
+    
+    <!-- Update servers here -->
+    <!--<updateservers>
+        <server type="extension" priority="1" name="Intellectual Property Update Server">http://extensions.thethinkery.net/iproperty.xml</server>
+    </updateservers>-->
+</extension>

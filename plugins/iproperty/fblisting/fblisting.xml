@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Facebook Post New / Updated Listing</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Intellectual Property Facebook Post Property. Register your IProperty website as an Application to obtain your OAuth keys. You can register the site and obtain keys here: https://developers.facebook.com</description>
+	<files>
+		<filename plugin="fblisting">fblisting.php</filename>
+        <filename>index.html</filename>
+        <filename>README.md</filename>
+        <folder>assets</folder>
+	</files>
+	<languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_fblisting.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/plugins/iproperty/fblisting/assets">
+				<field name="fblogin" type="fblogin" label="PLG_IP_FBLISTING_LOGINF" description="PLG_IP_FBLISTING_LOGINF_DESC" />
+                <field name="appid" type="text" default="" label="PLG_IP_FBLISTING_APPID" description="PLG_IP_FBLISTING_APPID_DESC" />
+                <field name="appsecret" type="text" default="" label="PLG_IP_FBLISTING_APPKEY" description="PLG_IP_FBLISTING_APPKEY_DESC" />
+				<field name="apptoken" type="text" default="" label="PLG_IP_FBLISTING_TOKEN" description="PLG_IP_FBLISTING_TOKEN_DESC" />
+                <field name="pageid" type="text" default="" label="PLG_IP_FBLISTING_PAGEID" description="PLG_IP_FBLISTING_PAGEID_DESC" />
+                <field name="showprice" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_PRICE" description="PLG_IP_FBLISTING_TWEET_SHOW_PRICE_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showbeds" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_BEDS" description="PLG_IP_FBLISTING_SHOW_BEDS_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showbaths" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_BATHS" description="PLG_IP_FBLISTING_SHOW_BATHS_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showaddress" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_ADDRESS" description="PLG_IP_FBLISTING_SHOW_ADDRESS_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showsqft" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_SQFT" description="PLG_IP_FBLISTING_SHOW_SQFT_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showreduced" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_REDUCED" description="PLG_IP_FBLISTING_SHOW_REDUCED_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="showsaletype" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_SHOW_SALETYPE" description="PLG_IP_FBLISTING_SHOW_SALETYPE_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="postnew" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_POST_NEW" description="PLG_IP_FBLISTING_POST_NEW_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field name="postupdate" type="radio" class="btn-group" default="0" label="PLG_IP_FBLISTING_POST_UPDATE" description="PLG_IP_FBLISTING_POST_UPDATE_DESC">
+                  <option value="0">JNO</option>
+                  <option value="1">JYES</option>
+                </field>
+                <field type="spacer" name="" class="text" label="PLG_IP_FBLISTING_BITLYLABEL" />
+                <field name="bitlykey" type="text" default="" label="PLG_IP_FBLISTING_BITKEY" description="PLG_IP_FBLISTING_BITKEY_DESC" />
+             </fieldset>
+         </fields>
+     </config>
+</extension>

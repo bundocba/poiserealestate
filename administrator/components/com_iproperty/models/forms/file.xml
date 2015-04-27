@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form enctype="multipart/form-data">
+	<fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+	<field name="title" type="text" class="inputbox cssinput" size="100" label="COM_IPROPERTY_FILE_TITLE" description=""  />
+        <field name="description" type="textarea" class="inputbox span12" row="3" label="COM_IPROPERTY_FILE_DESCRIPTION" description="" filter="JComponentHelper::filterText" buttons="true" hide="readmore,pagebreak"/>
+        <field name="fname" type="text" class="inputbox" label="COM_IPROPERTY_FILE_FNAME" description=""  />
+        <field name="type" type="text" class="inputbox" label="JFIELD_TYPE_LABEL" description="JFIELD_TYPE_DESC" />
+        <field name="files" type="file" class="inputbox" label="JFIELD_PATH_LABEL" description="JFIELD_PATH_DESC" />     
+
+        <!-- publishing -->
+        <field name="state" type="list" class="inputbox" label="JSTATUS"	description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+        </field>        
+              
+
+   
+    </fieldset>
+    <!-- ACL params -->
+    
+</form>

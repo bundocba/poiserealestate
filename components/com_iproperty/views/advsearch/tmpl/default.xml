@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_ADVSEARCH">
+		<message>
+			<![CDATA[COM_IPROPERTY_ADVSEARCH_DESC]]>
+		</message>
+	</layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="show_ip_title" type="list" label="COM_IPROPERTY_SHOW_IP_TITLE" default="1" description="COM_IPROPERTY_SHOW_IP_TITLE_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="advsearch_default" type="list" label="COM_IPROPERTY_DEFAULT_ADVSEARCH" default="0" description="COM_IPROPERTY_DEFAULT_ADVSEARCH_DESC">
+                <option	value="0">JNO</option>
+                <option	value="1">JYES</option>
+            </field>
+            <field name="show_ip_disclaimer" type="list" label="COM_IPROPERTY_SHOW_IP_DISCLAIMER" default="0" description="COM_IPROPERTY_SHOW_IP_DISCLAIMER_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+        </fieldset>
+        <fieldset name="advanced" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="slider_header" type="header" default="COM_IPROPERTY_SLIDERS" />
+            <field name="adv_map_sliders" type="list" default="1" label="COM_IPROPERTY_ADV_MAP_SHOW_SLIDERS">
+                <option value="1">COM_IPROPERTY_ADV_MAP_SLIDERS</option>
+                <option value="0">COM_IPROPERTY_ADV_MAP_DROPDOWNS</option>
+            </field>
+            <field name="adv_map_filters" type="list" default="1" label="COM_IPROPERTY_ADV_MAP_FILTER_LOCATION">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_shapetools" type="list" default="" label="COM_IPROPERTY_ADV_SHOW_SHAPETOOLS">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+			<field name="adv_show_clusterer" type="list" default="" label="COM_IPROPERTY_ADV_SHOW_CLUSTERER">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_map_slider_theme" type="list" default="1" label="COM_IPROPERTY_ADV_MAP_SLIDER_THEME">
+                <option value="ui-lightness">ui-lightness</option>
+                <option value="base">base</option>
+                <option value="black-tie">black-tie</option>
+                <option value="blitzer">blitzer</option>
+                <option value="cupertino">cupertino</option>
+                <option value="dark-hive">dark-hive</option>
+                <option value="dot-luv">dot-luv</option>
+                <option value="eggplant">eggplant</option>
+                <option value="excite-bike">excite-bike</option>
+                <option value="flick">flick</option>
+                <option value="hot-sneaks">hot-sneaks</option>
+                <option value="humanity">humanity</option>
+                <option value="le-frog">le-frog</option>
+                <option value="mint-choc">mint-choc</option>
+                <option value="overcast">overcast</option>
+                <option value="pepper-grinder">pepper-grinder</option>
+                <option value="redmond">redmond</option>
+                <option value="smoothness">smoothness</option>
+                <option value="south-street">south-street</option>
+                <option value="start">start</option>
+                <option value="sunny">sunny</option>
+                <option value="swanky-purse">swanky-purse</option>
+                <option value="trontastic">trontastic</option>
+                <option value="ui-darkness">ui-darkness</option>
+                <option value="ui-lightness">ui-lightness</option>
+                <option value="vader">vader</option>
+            </field>
+            <field name="show_price_sliders" type="list" default="1" label="COM_IPROPERTY_SHOW_PRICE_SLIDERS">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_sqft_sliders" type="list" default="1" label="COM_IPROPERTY_SHOW_SQFT_SLIDERS">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_beds_sliders" type="list" default="1" label="COM_IPROPERTY_SHOW_BEDS_SLIDERS">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_baths_sliders" type="list" default="1" label="COM_IPROPERTY_SHOW_BATHS_SLIDERS">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <!-- let user select whether to use the table layout or overview layout for results -->
+            <field name="advlayout_header" type="header" default="COM_IPROPERTY_ADV_LAYOUT" />
+            <field name="adv_layout" type="list" default="0" label="COM_IPROPERTY_ADV_LAYOUT" description="COM_IPROPERTY_ADV_LAYOUT_DESC">
+                <option value="0">COM_IPROPERTY_ADV_TABLE</option>
+                <option value="1">COM_IPROPERTY_ADV_OVERVIEW</option>
+            </field>
+			<!-- decide which result columns to build in result table / overview -->
+            <field name="results_header" type="header" default="COM_IPROPERTY_RESULTS" />
+            <field name="adv_column_pid" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_PID">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_column_price" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_PRICE">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_column_street" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_STREET">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_column_beds" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_BEDS">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_column_baths" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_BATHS">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_column_sqft" type="list" default="1" label="COM_IPROPERTY_ADV_RESULTS_SQFT">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <!-- if none of the following params are set, then will default to IP advanced search settings -->
+            <field name="settings_header" type="header" default="COM_IPROPERTY_SETTINGS" description="COM_IPROPERTY_ADVSEARCH_DEFAULTS_DESC" />
+            <field name="adv_perpage" type="list" class="inputbox" label="COM_IPROPERTY_PROPERTIES_PER_PAGE" description="COM_IPROPERTY_PER_PAGE_TIP" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="5">J5</option>
+                <option value="10">J10</option>
+                <option value="20">J20</option>
+                <option value="50">J50</option>
+                <option value="100">J100</option>
+				<option value="150">J150</option>
+				<option value="200">J200</option>
+				<option value="250">J250</option>
+				<option value="500">J500</option>
+            </field>
+            <field name="adv_nolimit" type="list" class="inputbox" label="COM_IPROPERTY_ADV_NO_LIMIT" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_price_low" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_PRICE_LOW" description="" default="" />
+            <field name="adv_price_high" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_PRICE_HIGH" description="" default="" />
+            <field name="adv_beds_low" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BEDS_LOW" description="" default="" />
+            <field name="adv_beds_high" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BEDS_HIGH" description="" default="" />
+            <field name="adv_baths_low" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BATHS_LOW" description="" default="" />
+            <field name="adv_baths_high" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_BATHS_HIGH" description="" default="" />
+            <field name="adv_sqft_low" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_SQFT_LOW" description="" default="" />
+            <field name="adv_sqft_high" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ADV_SQFT_HIGH" description="" default="" />
+            <field name="adv_default_lat" type="text" class="inputbox" size="20" label="COM_IPROPERTY_ADV_DEFAULT_LAT" description="" default="" />
+            <field name="adv_default_long" type="text" class="inputbox" size="20" label="COM_IPROPERTY_ADV_DEFAULT_LONG" description="" default="" />
+            <field name="adv_default_zoom" type="text" class="inputbox" size="5" label="COM_IPROPERTY_ADV_DEFAULT_ZOOM" description="" default="" />
+            <field name="adv_maptype" type="list" class="inputbox" label="COM_IPROPERTY_ADV_DEFAULT_MAPTYPE" description="" size="1">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="HYBRID">HYBRID</option>
+                <option value="ROADMAP">ROADMAP</option>
+                <option value="SATELLITE">SATELLITE</option>
+                <option value="TERRAIN">TERRAIN</option>
+            </field>
+            <!-- ADVSEARCH CRITERIA -->
+            <field name="adv_show_amen" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_AMEN" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_hoa" type="list" class="inputbox" label="COM_IPROPERTY_ADV_SHOW_HOA" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_reo" type="list" class="inputbox" label="COM_IPROPERTY_ADV_SHOW_REO" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_wf" type="list" class="inputbox" label="COM_IPROPERTY_ADV_SHOW_WF" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_stype" type="list" class="inputbox" label="COM_IPROPERTY_ADV_SHOW_STYPE" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_country" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_COUNTRY" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_locstate" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_STATE" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_province" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_PROVINCE" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_county" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_COUNTY" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_region" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_REGION" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="adv_show_city" type="list" class="inputbox" label="COM_IPROPERTY_SHOW_CITY" description="" size="1" default="">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="defaults_header" type="header" default="COM_IPROPERTY_DEFAULTS" description="" />
+            <field name="default_stype" type="stypes" default="" label="COM_IPROPERTY_STYPE" description="" available="true" />
+            <field name="default_cat" type="ipcategory" default="" label="COM_IPROPERTY_CATEGORY" description="" />
+            <field name="default_city" type="city" default="" label="COM_IPROPERTY_CITY" description="" />
+            <field name="default_locstate" type="locstate" default="" label="COM_IPROPERTY_STATE" description="" available="true" />
+            <field name="default_province" type="province" default="" label="COM_IPROPERTY_PROVINCE" description="" />
+            <field name="default_county" type="county" default="" label="COM_IPROPERTY_COUNTY" description="" />
+            <field name="default_region" type="region" default="" label="COM_IPROPERTY_REGION" description="" />
+            <field name="default_country" type="country" default="" label="COM_IPROPERTY_COUNTRY" description="" available="true" />
+            <field name="default_hoa" type="list" default="0" label="COM_IPROPERTY_HOA" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="default_reo" type="list" default="0" label="COM_IPROPERTY_REO" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="default_waterfront" type="list" default="0" label="COM_IPROPERTY_WATERFRONT" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Tweet This</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Show Tweet Button in property view.</description>
+	<files>
+		<filename plugin="tweetthis">tweetthis.php</filename>
+        <filename>index.html</filename>
+	</files>
+    <languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_tweetthis.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="position" type="list" default="bottom" label="PLG_IP_TWEETTHIS_POSITION_LABEL" description="PLG_IP_TWEETTHIS_POSITION_DESC">
+                    <option value="top">PLG_IP_TWEETTHIS_TOP</option>
+                    <option value="bottom">PLG_IP_TWEETTHIS_BOTTOM</option>
+                </field>
+                <field name="tweetvia" type="text" default="" label="PLG_IP_TWEETTHIS_TWEETVIA" description="PLG_IP_TWEETTHIS_TWEETVIA_DESC" />
+                <field name="tweethashtags" type="text" default="" label="PLG_IP_TWEETTHIS_HASHTAGS" description="PLG_IP_TWEETTHIS_HASHTAGS_DESC" />
+                <field name="tweetlang" type="list" default="en" label="PLG_IP_TWEETTHIS_LANGUAGE" description="PLG_IP_TWEETTHIS_LANGUAGE_DESC" >
+                    <option value="fa">Farsi</option>
+                    <option value="en">English</option>
+                    <option value="fi">Finnish - Suomi</option>
+                    <option value="ur">Urdu</option>
+                    <option value="tr">Turkish - Türkçe</option>
+                    <option value="it">Italian - Italiano</option>
+                    <option value="ru">Russian</option>
+                    <option value="pl">Polish - Polski</option>
+                    <option value="he">Hebrew</option>
+                    <option value="sv">Swedish - Svenska</option>
+                    <option value="fr">French - français</option>
+                    <option value="es">Spanish - Español</option>
+                    <option value="ar">Arabic</option>
+                    <option value="msa">Malay - Bahasa Melayu</option>
+                    <option value="th">Thai</option>
+                    <option value="no">Norwegian - Norsk</option>
+                    <option value="pt">Portuguese - Português</option>
+                    <option value="ko">Korean</option>
+                    <option value="da">Danish - Dansk</option>
+                    <option value="id">Indonesian - Bahasa Indonesia</option>
+                    <option value="nl">Dutch - Nederlands</option>
+                    <option value="hi">Hindi</option>
+                    <option value="zh-cn">Simplified Chinese</option>
+                    <option value="hu">Hungarian - Magyar</option>
+                    <option value="ja">Japanese</option>
+                    <option value="zh-tw">Traditional Chinese</option>
+                    <option value="fil">Filipino - Filipino</option>
+                    <option value="de">German - Deutsch</option>
+                </field>
+                <field name="topmargin" type="text" default="10" label="PLG_IP_TWEETTHIS_TOPMARGIN" description="PLG_IP_TWEETTHIS_TOPMARGIN_DESC" />
+                <field name="rightmargin" type="text" default="10" label="PLG_IP_TWEETTHIS_RIGHTMARGIN" description="PLG_IP_TWEETTHIS_RIGHTMARGIN_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

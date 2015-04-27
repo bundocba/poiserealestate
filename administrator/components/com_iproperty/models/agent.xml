@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_AGENT_PARAMS">
+		<message>
+			<![CDATA[COM_IPROPERTY_AGENT_PARAMS_DESC]]>
+		</message>
+	</layout>
+    <fields name="params">
+        <field name="maxlistings" type="text" default="" label="COM_IPROPERTY_MAXIMUM_LISTINGS" description="COM_IPROPERTY_MAXIMUM_LISTINGS_DESC" />
+    </fields>
+</metadata>

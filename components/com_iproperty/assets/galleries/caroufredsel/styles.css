@@ -1,0 +1,14 @@
+.ip-image-tab div.slide {
+	position: relative;
+}
+.ip-image-tab div.slide div {
+	background-color: rgba(0, 0, 0, 0.6);
+	width: 100%;
+	display: none;
+	position: absolute;
+	bottom: 0;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}

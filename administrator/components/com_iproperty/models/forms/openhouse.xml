@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+        <field name="name" type="text" class="inputbox" label="COM_IPROPERTY_NAME" size="50" description="" required="true" />
+        <field name="prop_id" type="modal_property" class="inputbox" label="COM_IPROPERTY_PROPERTY" description="" size="1" required="true" useauth="true" />
+        <field name="openhouse_start" type="ipcalendar" label="COM_IPROPERTY_START"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M" showtime="true" filter="server_utc" />
+        <field name="openhouse_end" type="ipcalendar" label="COM_IPROPERTY_END"
+			description="" class="inputbox" size="22"
+			format="%Y-%m-%d %H:%M" showtime="true" filter="server_utc" />
+        <field name="comments" type="textarea" class="inputbox span12" label="COM_IPROPERTY_NOTES" rows="5" description="" filter="JComponentHelper::filterText" />
+        
+        <!-- Publishing -->
+        <field name="state" type="list" class="inputbox" label="JSTATUS"	description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

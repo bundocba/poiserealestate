@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - JComments Plugin (Form Position)</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>JComments plugin (Form Position). Note: JComments is available from the Joomla Extensions Directory or at http://www.joomlatune.com/jcomments.html. Please install and configure JComments before using this plugin.</description>
+	<files>
+		<filename plugin="jcomments">jcomments.php</filename>
+        <filename>index.html</filename>
+	</files>
+    <languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_jcomments.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tabtitle" type="text" default="Comments" label="PLG_IP_JCOMMENTS_TABTITLE_LABEL" description="PLG_IP_JCOMMENTS_TABTITLE_DESC" />
+                <field name="position" type="radio" class="btn-group" default="1" label="PLG_IP_JCOMMENTS_POSITION_LABEL" description="PLG_IP_JCOMMENTS_POSITION_DESC">
+                    <option value="0">PLG_IP_JCOMMENTS_BEFORE</option>
+                    <option value="1">PLG_IP_JCOMMENTS_AFTER</option>
+				</field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

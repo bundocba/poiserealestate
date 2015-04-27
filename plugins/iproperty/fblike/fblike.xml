@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Facebook Like</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Intellectual Property Facebook Like Plugin</description>
+	<files>
+		<filename plugin="fblike">fblike.php</filename>
+        <filename>index.html</filename>
+	</files>
+    <languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_fblike.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="position" type="list" default="bottom" label="PLG_IP_FBLIKE_POSITION_LABEL" description="PLG_IP_FBLIKE_POSITION_DESC">
+                    <option value="top">PLG_IP_FBLIKE_TOP</option>
+                    <option value="bottom">PLG_IP_FBLIKE_BOTTOM</option>
+                </field>
+                <field name="layout" type="list" default="standard" label="PLG_IP_FBLIKE_LAYOUT_LABEL" description="PLG_IP_FBLIKE_LAYOUT_DESC">
+                  <option value="standard">PLG_IP_FBLIKE_STANDARD</option>
+                  <option value="button_count">PLG_IP_FBLIKE_BUTTON_COUNT</option>
+                </field>
+                <field name="show_faces" type="radio" class="btn-group" default="yes" label="PLG_IP_FBLIKE_SHOW_FACES_LABEL" description="PLG_IP_FBLIKE_SHOW_FACES_DESC">
+                  <option value="yes">JYES</option>
+                  <option value="no">JNO</option>
+                </field>
+                <field name="width" type="text" default="500" label="PLG_IP_FBLIKE_WIDTH_LABEL" description="PLG_IP_FBLIKE_WIDTH_DESC" size="5" />
+                <field name="height" type="text" default="50" label="PLG_IP_FBLIKE_HEIGHT_LABEL" description="PLG_IP_FBLIKE_HEIGHT_DESC" size="5" />
+                <field name="verb" type="list" default="like" label="PLG_IP_FBLIKE_VERBAGE_LABEL" description="PLG_IP_FBLIKE_VERBAGE_DESC">
+                  <option value="like">PLG_IP_FBLIKE_LIKE</option>
+                  <option value="recommend">PLG_IP_FBLIKE_RECOMMEND</option>
+                </field>
+                <field name="font" type="list" default="arial" label="PLG_IP_FBLIKE_FONT" description="">
+                  <option value="arial">arial</option>
+                  <option value="lucida grande">lucida grande</option>
+                  <option value="segoe ui">segoe ui</option>
+                  <option value="tahoma">tahoma</option>
+                  <option value="trebuchet ms">trebuchet ms</option>
+                  <option value="verdana">verdana</option>
+                </field>
+                <field name="color_scheme" type="list" default="light" label="PLG_IP_FBLIKE_COLOR_LABEL" description="PLG_IP_FBLIKE_COLOR_DESC">
+                  <option value="light">PLG_IP_FBLIKE_LIGHT</option>
+                  <option value="dark">PLG_IP_FBLIKE_DARK</option>
+                </field>
+             </fieldset>
+         </fields>
+     </config>
+</extension>

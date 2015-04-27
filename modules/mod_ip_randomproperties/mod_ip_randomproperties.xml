@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" method="upgrade" client="site">
+	<name>IP Random</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Random properties table layout or vertical layout view. Select a category optional. Brief overview of Iproperty listings and link to property page.</description>
+	<files>
+		<filename module="mod_ip_randomproperties">mod_ip_randomproperties.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl/</folder>
+	</files>
+
+    <languages>
+        <language tag="en-GB">language/en-GB.mod_ip_randomproperties.ini</language>
+    </languages>
+    
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+                <field name="cat_id" type="ipcategory" default="" label="MOD_IP_RANDOM_CATID" description="MOD_IP_RANDOM_CATID_DESC" />
+                <field name="cat_subcats" type="radio" class="btn-group" default="0" label="MOD_IP_RANDOM_SUBCATS" description="MOD_IP_RANDOM_SUBCATS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="prop_stype" type="stypes" default="0" label="MOD_IP_RANDOM_STYPE" description="MOD_IP_RANDOM_STYPE_DESC" />
+                <field name="" type="header" default="MOD_IP_RANDOM_LAYOUT" label="" description="" />
+                <field name="include_ipcss" class="btn-group" type="radio" default="1" label="MOD_IP_RANDOM_INCLUDE_IPCSS" description="MOD_IP_RANDOM_INCLUDE_IPCSS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="iplayout" type="list" default="columns" label="MOD_IP_RANDOM_LAYOUT" description="MOD_IP_RANDOM_LAYOUT_DESC">
+                    <option value="columns">MOD_IP_RANDOM_COLUMNS</option>
+                    <option value="rows">MOD_IP_RANDOM_ROWS</option>
+                </field>
+                <field name="columns" type="list" default="3" label="MOD_IP_RANDOM_COLUMNS" description="MOD_IP_RANDOM_COLUMNS_DESC">
+                    <option value="1">J1</option>
+                    <option value="2">J2</option>
+                    <option value="3">J3</option>
+                    <option value="4">J4</option>
+                </field>
+                <field name="preview_count" type="text" default="200" label="MOD_IP_RANDOM_CHARACTERS" description="MOD_IP_RANDOM_CHARACTERS_DESC" />
+                <field name="" type="header" default="MOD_IP_RANDOM_OPTIONS" label="" description="" />
+                <field name="count" type="text" default="5" label="MOD_IP_RANDOM_COUNT" description="MOD_IP_RANDOM_COUNT_DESC" />
+                <field name="show_desc" type="radio" class="btn-group" default="1" label="MOD_IP_RANDOM_SHOWDESC" description="MOD_IP_RANDOM_SHOWDESC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_banners" type="radio" class="btn-group" default="1" label="MOD_IP_RANDOM_SHOWBANNERS" description="MOD_IP_RANDOM_SHOWBANNERS_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="show_readmore" type="radio" class="btn-group" default="1" label="MOD_IP_RANDOM_SHOW_READ_MORE">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="usethumb" type="radio" class="btn-group" default="1" label="MOD_IP_RANDOM_USETHUMB" description="MOD_IP_RANDOM_USETHUMB_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hidenopic" type="radio" class="btn-group" default="0" label="MOD_IP_RANDOM_HIDENOPIC" description="MOD_IP_RANDOM_HIDENOPIC_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="hide_mod" type="radio" class="btn-group" default="1" label="MOD_IP_RANDOM_HIDEMOD" description="MOD_IP_RANDOM_HIDEMOD_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+                    default=""
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+        </fields>
+    </config>
+</extension>

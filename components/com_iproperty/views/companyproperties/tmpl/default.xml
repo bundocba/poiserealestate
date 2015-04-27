@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_COMPANY_PROPERTIES">
+		<message>
+			<![CDATA[COM_IPROPERTY_COMPANY_PROPERTIES_DESC]]>
+		</message>
+	</layout>
+    <fields name="request">
+        <fieldset name="request" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="id" type="company" default="" label="COM_IPROPERTY_COMPANY" description="COM_IPROPERTY_SELECT_COMPANY" required="true" useauth="true" />            
+        </fieldset>
+    </fields>
+    <fields name="params">
+        <fieldset name="basic" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="cat" type="ipcategory" default="" label="COM_IPROPERTY_CATEGORY" description="COM_IPROPERTY_SELECT_CATEGORY" />
+            <field name="show_ip_title" type="list" label="COM_IPROPERTY_SHOW_IP_TITLE" default="1" description="COM_IPROPERTY_SHOW_IP_TITLE_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+            <field name="show_ip_map" type="list" label="COM_IPROPERTY_SHOW_IP_MAP" default="0" description="COM_IPROPERTY_SHOW_IP_MAP_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <!-- presets -->
+            <field name="" type="header" default="Presets" label="" description="" />
+            <field name="hoa" type="radio" class="btn-group" default="0" label="COM_IPROPERTY_HOA" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="reo" type="radio" class="btn-group" default="0" label="COM_IPROPERTY_REO" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="waterfront" type="radio" class="btn-group" default="0" label="COM_IPROPERTY_WATERFRONT" description="">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="stype" type="stypes" default="" label="COM_IPROPERTY_STYPE" description="" multiple="multiple" available="true" />
+            <field name="country" type="country" default="" label="COM_IPROPERTY_COUNTRY" description="" available="true" />
+            <field name="locstate" type="locstate" default="" label="COM_IPROPERTY_STATE" description="" available="true" />
+            <field name="province" type="province" default="" label="COM_IPROPERTY_PROVINCE" description="" />
+            <field name="county" type="county" default="" label="COM_IPROPERTY_COUNTY" description="" />
+            <field name="region" type="region" default="" label="COM_IPROPERTY_REGION" description="" />
+            <field name="city" type="city" default="" label="COM_IPROPERTY_CITY" description="" />            
+            <field name="beds" type="beds" default="" label="COM_IPROPERTY_BEDS" description="" />
+            <field name="baths" type="baths" default="" label="COM_IPROPERTY_BATHS" description="" fractions="false" />
+            <field name="price_low" type="text" default="" label="COM_IPROPERTY_ADV_PRICE_LOW" description="Minimum Price - Number only! No punctuation." />
+            <field name="price_high" type="text" default="" label="COM_IPROPERTY_ADV_PRICE_HIGH" description="Maximum Price - Number only! No punctuation." />
+            <field name="filter_order" type="sortby" default="" label="COM_IPROPERTY_DEFAULT_PROPERTY_SORT" description="" />
+            <field name="filter_order_Dir" type="orderby" default="" label="COM_IPROPERTY_ORDER" description="" />
+            <!-- quick search settings -->
+            <field name="" type="header" default="Quick Search" label="" description="" />
+            <field name="qs_show_quicksearch" type="radio" class="btn-group" label="COM_IPROPERTY_QS_SHOW" default="1">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_keyword" type="list" label="COM_IPROPERTY_QS_SHOW_KEYWORD">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_cat" type="list" label="COM_IPROPERTY_QS_SHOW_CAT">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_stype" type="list" label="COM_IPROPERTY_QS_SHOW_STYPE">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_country" type="list" label="COM_IPROPERTY_QS_SHOW_COUNTRY">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>           
+            <field name="qs_show_state" type="list" label="COM_IPROPERTY_QS_SHOW_STATE">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_province" type="list" label="COM_IPROPERTY_QS_SHOW_PROVINCE">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_county" type="list" label="COM_IPROPERTY_SHOW_COUNTY">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_region" type="list" label="COM_IPROPERTY_SHOW_REGION">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_city" type="list" label="COM_IPROPERTY_QS_SHOW_CITY">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_minbeds" type="list" label="COM_IPROPERTY_QS_SHOW_MINBEDS">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_minbaths" type="list" label="COM_IPROPERTY_QS_SHOW_MINBATHS">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_price" type="list" label="COM_IPROPERTY_QS_SHOW_PRICE">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="qs_show_sqft" type="list" label="COM_IPROPERTY_QS_SHOW_SQFT">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <!-- Listing info settings -->
+            <field name="" type="header" default="COM_IPROPERTY_LISTDETAILS" label="" description="" />
+            <field name="show_list_ag" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LISTAG" filter="intval" size="1" default="1" description="COM_IPROPERTY_SHOW_LISTAG_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_list_co" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LISTCO" filter="intval" size="1" default="1" description="COM_IPROPERTY_SHOW_LISTCO_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_created" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LISTCREATED" filter="intval" size="1" default="1" description="COM_IPROPERTY_SHOW_LISTCREATED_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_modified" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LISTMODIFIED" filter="intval" size="1" default="0" description="COM_IPROPERTY_SHOW_LISTMODIFIED_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_stype" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_LISTSTYPE" filter="intval" size="1" default="1" description="COM_IPROPERTY_SHOW_LISTSTYPE_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="show_ip_disclaimer" type="radio" class="btn-group" label="COM_IPROPERTY_SHOW_IP_DISCLAIMER" filter="intval" size="1" default="0" description="COM_IPROPERTY_SHOW_IP_DISCLAIMER_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

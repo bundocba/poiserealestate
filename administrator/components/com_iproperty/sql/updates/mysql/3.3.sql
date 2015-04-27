@@ -1,0 +1,1 @@
+ALTER IGNORE TABLE `#__iproperty_settings` ADD `adv_show_clusterer` tinyint(1) unsigned NOT NULL DEFAULT '0' AFTER `adv_show_shapetools`;

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+    <name>IProperty - Private Messages</name>
+    <author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>info@thethinkery.net</authorEmail>
+    <authorUrl>www.thethinkery.net</authorUrl>
+    <version>3.3.1</version>
+    <description>IProperty Private Message Plugin. Sends private message to agents when request or send to friend form is submitted.</description>
+    <files>
+        <filename plugin="privatemessage">privatemessage.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+       <language tag="en-GB">en-GB.plg_iproperty_privatemessage.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="req_message" type="radio" class="btn-group" default="0" label="PLG_IP_PRIVATEMESSAGE_INFO" description="PLG_IP_PRIVATEMESSAGE_INFO_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="friend_message" type="radio" class="btn-group" default="0" label="PLG_IP_PRIVATEMESSAGE_FRIEND" description="PLG_IP_PRIVATEMESSAGE_FRIEND_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="sender_id" type="user" default="" required="true" label="PLG_IP_PRIVATEMESSAGE_FROM" description="PLG_IP_PRIVATEMESSAGE_FROM_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

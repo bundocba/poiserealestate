@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_COMPANIES">
+		<message>
+			<![CDATA[COM_IPROPERTY_COMPANIES_DESC]]>
+		</message>
+	</layout>
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="show_ip_title" type="list" label="COM_IPROPERTY_SHOW_IP_TITLE" default="1" description="COM_IPROPERTY_SHOW_IP_TITLE_DESC">
+                <option	value="0">JHIDE</option>
+                <option	value="1">JSHOW</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

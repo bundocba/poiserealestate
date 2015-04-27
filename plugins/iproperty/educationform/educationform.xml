@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Education.com Plugin (Form Position)</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Education.com plugin (Form Position). Note: Education.com data is only available in some areas and may not work for your location. </description>
+	<files>
+		<filename plugin="educationform">educationform.php</filename>
+        <filename>index.html</filename>
+	</files>
+    <languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_educationform.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tabtitle" type="text" default="Schools" label="PLG_IP_ED_TABTITLE_LABEL" description="PLG_IP_ED_TABTITLE_DESC" />
+                <field name="radius" type="text" default="1.5" label="PLG_IP_ED_RADIUS_LABEL" description="PLG_IP_ED_RADIUS_DESC" />
+                <field name="minimum" type="text" default="3" label="PLG_IP_ED_MINRESULTS_LABEL" description="PLG_IP_ED_MINRESULTS_DESC" />
+                <field name="maximum" type="text" default="5" label="PLG_IP_ED_MAXRESULTS_LABEL" description="PLG_IP_ED_MAXRESULTS_DESC" />
+                <field name="position" type="radio" class="btn-group" default="1" label="PLG_IP_ED_POSITION_LABEL" description="PLG_IP_ED_POSITION_DESC">
+				  <option value="0">PLG_IP_ED_BEFORE</option>
+				  <option value="1">PLG_IP_ED_AFTER</option>
+				</field>
+                <field name="debug" type="radio" class="btn-group" default="0" label="PLG_IP_ED_DEBUG_LABEL" description="PLG_IP_ED_DEBUG_DESC">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

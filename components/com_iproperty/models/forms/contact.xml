@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+	<fieldset name="contact" addrulepath="components/com_iproperty/models/rules">
+		<field name="sender_name"
+			type="text"
+			id="ip_sender_name"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_NAME"
+			filter="string"
+			required="true"
+		/>
+		<field name="sender_email"
+			type="email"
+			id="ip_sender_email"
+			size="30"
+			description=""
+			label="COM_IPROPERTY_YOUR_EMAIL"
+			filter="string"
+			validate="ipropertyemail"
+			required="true"
+		/>
+		<field name="sender_dphone"
+			type="text"
+			id="ip_sender_dphone"
+			size="60"
+			description=""
+			label="COM_IPROPERTY_DAY_PHONE"
+			filter="string"	
+		/>
+        <field name="sender_ephone"
+			type="text"
+			id="ip_sender_ephone"
+			size="60"
+			description=""
+			label="COM_IPROPERTY_EVENING_PHONE"
+			filter="string"	
+		/>
+        <field name="sender_preference" type="list" class="inputbox" id="ip_sender_preference" label="COM_IPROPERTY_CONTACT_PREFERENCE" description="" filter="string" size="1" default="COM_IPROPERTY_EITHER">
+			<option value="COM_IPROPERTY_PHONE">COM_IPROPERTY_PHONE</option>
+			<option value="COM_IPROPERTY_EMAIL">COM_IPROPERTY_EMAIL</option>
+            <option value="COM_IPROPERTY_EITHER">COM_IPROPERTY_EITHER</option>
+        </field>
+		<field name="sender_requests"
+			type="textarea"
+			cols="50"
+			rows="10"
+			id="ip_sender_requests"
+			description=""
+			label="COM_IPROPERTY_SPECIAL_REQUESTS"
+			filter="htmlsafe"
+            validate="ipropertyemailmessage"
+            required="true"
+		/>
+		<field name="sender_copy"
+			type="checkbox"
+			id="ip_sender_copy"
+			description=""
+			label="COM_IPROPERTY_COPY_ME_EMAIL"
+			default="0"
+		/>
+	</fieldset>
+    <fieldset name="captcha">
+		<field
+			name="captcha"
+			type="captcha"
+			label="COM_IPROPERTY_CAPTCHA_LABEL"
+			description="COM_IPROPERTY_CAPTCHA_DESC"
+			validate="captcha"
+			namespace="contact"
+		/>
+	</fieldset>
+</form>

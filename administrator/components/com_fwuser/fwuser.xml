@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0">
+	<name>fwuser</name>
+	<creationDate>Dec 2011</creationDate>
+	<author>Futureworkz Pte. Ltd.</author>
+	<authorEmail>support@futureworkz.com</authorEmail>
+	<authorUrl>http://www.futureworkz.com</authorUrl>
+	<copyright>All Rights Reserved. Futureworkz Pte. Ltd.</copyright>
+	<license>http://www.futureworkz.com/eula.html</license>
+	<version>1.0</version>
+	<description>COM_FWUSER_MANIFEST_DESCRIPTION</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>fwuser.php</filename>
+		<filename>controller.php</filename>
+		<folder>helpers</folder>
+		<folder>controllers</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>tables</folder>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_fwuser.ini</language>
+	</languages>
+	<administration>
+		<menu>COM_FWUSER_MENU</menu>
+		<submenu>
+			<menu link="option=com_fwuser&amp;view=country" alt="">COM_FWUSER_SUBMENU_COUNTRY</menu>
+			<menu link="option=com_fwuser&amp;view=state" alt="">COM_FWUSER_SUBMENU_STATE</menu>
+			<menu link="option=com_fwuser&amp;view=user" alt="">COM_FWUSER_SUBMENU_USER</menu>
+            <menu link="option=com_fwuser&amp;view=announ" alt="">COM_FWUSER_SUBMENU_ANNOUN</menu>
+		</submenu>
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>fwuser.php</filename>
+			<filename>controller.php</filename>
+			<folder>images</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_fwuser.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_fwuser.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+

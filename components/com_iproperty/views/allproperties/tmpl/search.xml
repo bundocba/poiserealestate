@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_SEARCH_PROPERTIES">
+		<message>
+			<![CDATA[COM_IPROPERTY_SEARCH_PROPERTIES]]>
+		</message>
+	</layout>
+    <fields name="request">
+        <fieldset name="request" label="COM_IPROPERTY">
+            <field name="hotsheet" type="list" default="" label="COM_IPROPERTY_HOTSHEET" description="COM_IPROPERTY_SELECT_HOTSHEET" >
+                <option value="">JSELECT</option>
+                <option value="1">COM_IPROPERTY_NEW_LISTINGS</option>
+                <option value="2">COM_IPROPERTY_UPDATED_LISTINGS</option>
+            </field>            
+        </fieldset>
+    </fields>
+    
+</metadata>

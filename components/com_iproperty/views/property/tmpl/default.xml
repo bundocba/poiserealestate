@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_IPROPERTY_PROPERTY">
+		<message>
+			<![CDATA[COM_IPROPERTY_PROPERTY_DESC]]>
+		</message>
+	</layout>
+    <fields name="request">
+        <fieldset name="request" addfieldpath="/administrator/components/com_iproperty/models/fields">
+            <field name="id" type="modal_property" default="" label="COM_IPROPERTY_PROPERTY" description="COM_IPROPERTY_SELECT_PROPERTY" required="true" useauth="true" />
+        </fieldset>
+    </fields>
+</metadata>

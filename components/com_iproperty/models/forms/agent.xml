@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="details" addfieldpath="/administrator/components/com_iproperty/models/fields">
+		<field name="id" type="text" default="0" readonly="true" class="readonly" label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+        <!-- details -->
+        <field name="fname" type="text" class="inputbox" size="50" label="COM_IPROPERTY_FIRST_NAME" description="" required="true" />
+        <field name="lname" type="text" class="inputbox" size="50" label="COM_IPROPERTY_LAST_NAME" description="" required="true" />
+        <field name="alias" type="text" class="inputbox" size="50" label="JFIELD_ALIAS_LABEL" description="JFIELD_ALIAS_DESC" />
+        <field name="company" type="company" class="inputbox" size="1" label="COM_IPROPERTY_COMPANY" description="" required="true" useauth="true" />
+        <field name="email" type="email" onchange="checkAgentEmail()" class="inputbox validate-email" size="50" label="COM_IPROPERTY_EMAIL" description="" required="true" />
+        <field name="phone" type="text" class="inputbox" size="50" label="COM_IPROPERTY_PHONE" description="" />
+        <field name="mobile" type="text" class="inputbox" size="50" label="COM_IPROPERTY_MOBILE" description="" />
+        <field name="fax" type="text" class="inputbox" size="50" label="COM_IPROPERTY_FAX" description="" />
+        <field name="alicense" type="text" class="inputbox" size="50" label="COM_IPROPERTY_LICENSE" description="" />
+
+        <!-- address -->
+        <field name="street" type="text" class="inputbox" size="50" label="COM_IPROPERTY_STREET" description="" />
+        <field name="street2" type="text" class="inputbox" size="50" label="COM_IPROPERTY_STREET2" description="" />
+        <field name="city" type="text" class="inputbox" size="50" label="COM_IPROPERTY_CITY" description="" />
+        <field name="locstate" type="locstate" class="inputbox" size="50" label="COM_IPROPERTY_STATE" description="" />
+        <field name="or" type="spacer" class="inputbox" size="50" label="COM_IPROPERTY_OR" />
+        <field name="province" type="text" class="inputbox" size="50" label="COM_IPROPERTY_PROVINCE" description="" />
+        <field name="postcode" type="text" class="inputbox" size="10" label="COM_IPROPERTY_ZIP" description="" />
+        <field name="country" type="country" class="inputbox" size="50" label="COM_IPROPERTY_COUNTRY" description="" />
+
+        <!-- web -->
+        <field name="website" type="text" class="inputbox" size="50" label="COM_IPROPERTY_WEBSITE" description="" />
+        <field name="msn" type="text" class="inputbox" size="50" label="COM_IPROPERTY_MSN" description="" />
+        <field name="skype" type="text" class="inputbox" size="50" label="COM_IPROPERTY_SKYPE" description="" />
+        <field name="gtalk" type="text" class="inputbox" size="50" label="COM_IPROPERTY_GTALK" description="" />
+        <field name="linkedin" type="text" class="inputbox" size="50" label="COM_IPROPERTY_LINKEDIN" description="" />
+        <field name="facebook" type="text" class="inputbox" size="50" label="COM_IPROPERTY_FACEBOOK" description="" />
+        <field name="twitter" type="text" class="inputbox" size="50" label="COM_IPROPERTY_TWITTER" description="" />
+        <field name="social1" type="text" class="inputbox" size="50" label="COM_IPROPERTY_SOCIAL1" description="" />
+
+        <!-- bio -->
+        <field name="iphead1" type="header" default="COM_IPROPERTY_AGENT_BIO" />
+        <field name="bio" type="editor" class="inputbox" label="" description="" filter="JComponentHelper::filterText" buttons="true" hide="readmore,pagebreak,image,article"/>
+
+        <!-- publishing -->
+        <field name="state" type="list" class="inputbox" label="JSTATUS"	description="JFIELD_PUBLISHED_DESC" filter="intval" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+        </field>        
+        <field name="featured" type="list" class="inputbox" label="JFEATURED" description="" filter="intval" size="1" default="0">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+        </field>        
+
+        <!-- image -->
+        <field name="icon" type="iconbasic" label="COM_IPROPERTY_IMAGE" readonly="true" folder="agents" />
+
+        <field name="user_id" type="user" onchange="checkAgentUser()" label="COM_IPROPERTY_LINKED_USER" description="COM_IPROPERTY_LINKED_USER_TIP" />
+        <field name="agent_type" type="list" label="COM_IPROPERTY_SUPER_AGENT" description="" class="inputbox" filter="intval" size="1" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+
+    <fields name="params">
+        <fieldset name="superagent_params" label="COM_IPROPERTY_AGENT_PARAMS">
+            <field name="maxlistings" type="text" class="inputbox" label="COM_IPROPERTY_MAXIMUM_LISTINGS" description="COM_IPROPERTY_MAXIMUM_LISTINGS_DESC" />
+            <field name="maxflistings" type="text" class="inputbox" label="COM_IPROPERTY_MAXIMUM_FEATURED_LISTINGS" description="COM_IPROPERTY_MAXIMUM_FEATURED_LISTINGS_DESC" />
+        </fieldset>
+    </fields>
+</form>

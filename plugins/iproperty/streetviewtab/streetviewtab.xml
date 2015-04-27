@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="iproperty" method="upgrade">
+	<name>IProperty - Street View Tab</name>
+	<author>The Thinkery</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2009 - 2014 The Thinkery LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@thethinkery.net</authorEmail>
+	<authorUrl>www.thethinkery.net</authorUrl>
+	<version>3.3.1</version>
+	<description>Google street view tab for Intellectual Property map tab plugin position.</description>
+	<files>
+		<filename plugin="streetviewtab">streetviewtab.php</filename>
+        <filename>streetview.js</filename>
+        <filename>index.html</filename>
+	</files>
+	<languages>
+	   <language tag="en-GB">en-GB.plg_iproperty_streetviewtab.ini</language>
+	</languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tabtitle" type="text" default="Street" label="PLG_IP_SV_TABTITLE_LABEL" description="PLG_IP_SV_TABTITLE_LABEL" />
+                <field name="yaw" type="text" default="370.64659986187695" label="PLG_IP_SV_YAW_LABEL" description="PLG_IP_SV_YAW_DESC" />
+                <field name="pitch" type="text" default="-20" label="PLG_IP_SV_PITCH_LABEL" description="PLG_IP_SV_PITCH_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
